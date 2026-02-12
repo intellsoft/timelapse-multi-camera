@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo (for Actions env)
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Clone Wiki (with auth)
@@ -33,7 +33,7 @@ jobs:
       - name: Extract nav-link articles using Python
         run: |
           mkdir -p articles
-          python3 - <<EOF
+          python3 - <<PYTHON
 import requests
 from bs4 import BeautifulSoup
 
@@ -48,7 +48,7 @@ with open("articles/list.txt", "w", encoding="utf-8") as out:
         title = a.get_text(strip=True)
         if href and title:
             out.write(f"{href}\t{title}\n")
-EOF
+PYTHON
 
       - name: Publish new articles to Wiki
         run: |
