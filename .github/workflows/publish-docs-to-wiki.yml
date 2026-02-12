@@ -1,4 +1,4 @@
-name: Auto Link Wiki With Main Docs Page
+name: Publish Docs Articles To Wiki
 
 on:
   schedule:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  link-wiki:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,33 +18,57 @@ jobs:
         run: |
           git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/intellsoft/timelapse-multi-camera.wiki.git wiki
 
-      - name: Add main source link to Wiki pages
+      - name: Fetch source page
         run: |
-          cd wiki
+          curl -L https://intellsoft.ir/docs/cctv-camera-timelapse-software-guide/ -o index.html
 
-          SOURCE_URL="https://intellsoft.ir/docs/cctv-camera-timelapse-software-guide/"
-          TRACKED_URL="${SOURCE_URL}?utm_source=github_wiki&utm_medium=wiki&utm_campaign=timelapse_docs"
+      - name: Extract nav-link articles
+        run: |
+          mkdir -p articles
 
-          for file in *.md; do
-            [ -f "$file" ] || continue
+          # استخراج href و متن لینک‌هایی با class="nav-link"
+          grep -oP '<a[^>]*class="nav-link"[^>]*href="\K[^"]+' index.html > links.txt
+          grep -oP '<a[^>]*class="nav-link"[^>]*>\\K[^<]+' index.html > titles.txt
 
-            if grep -q "cctv-camera-timelapse-software-guide" "$file"; then
-              echo "Link already exists in $file"
+          paste links.txt titles.txt > articles/list.txt
+
+      - name: Publish new articles to Wiki
+        run: |
+          while IFS=$'\t' read -r url title; do
+            slug=$(basename "$url")
+            file="wiki/$slug.md"
+
+            if [ -f "$file" ]; then
+              echo "Already exists: $title"
               continue
             fi
 
-            echo "" >> "$file"
-            echo "---" >> "$file"
-            echo "🔗 **راهنمای کامل نرم‌افزار تایم‌لپس دوربین مداربسته:**" >> "$file"
-            echo "" >> "$file"
-            echo "👉 [$SOURCE_URL]($TRACKED_URL)" >> "$file"
-          done
+            echo "Publishing: $title"
 
-      - name: Commit and push changes
+            curl -L "$url" -o article.html
+
+            # استخراج متن مقاله (بین <article> تا </article>)
+            sed -n '/<article/,/<\/article>/p' article.html \
+              | sed 's/<[^>]*>//g' > body.txt
+
+            {
+              echo "# $title"
+              echo ""
+              cat body.txt
+              echo ""
+              echo "---"
+              echo "🔗 **منبع اصلی مقاله:**"
+              echo ""
+              echo "👉 [$url]($url?utm_source=github_wiki&utm_medium=wiki&utm_campaign=timelapse_docs)"
+            } > "$file"
+
+          done < articles/list.txt
+
+      - name: Commit and push to Wiki
         run: |
           cd wiki
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add .
-          git commit -m "Auto link Wiki pages to main documentation page" || exit 0
+          git commit -m "Auto publish new documentation articles to Wiki" || exit 0
           git push
