@@ -34,21 +34,21 @@ jobs:
         run: |
           mkdir -p articles
           python3 - <<PYTHON
-import requests
-from bs4 import BeautifulSoup
+          import requests
+          from bs4 import BeautifulSoup
 
-with open("index.html", encoding="utf-8") as f:
-    soup = BeautifulSoup(f, "html.parser")
+          with open("index.html", encoding="utf-8") as f:
+              soup = BeautifulSoup(f, "html.parser")
 
-links = soup.find_all("a", class_="nav-link")
+          links = soup.find_all("a", class_="nav-link")
 
-with open("articles/list.txt", "w", encoding="utf-8") as out:
-    for a in links:
-        href = a.get("href")
-        title = a.get_text(strip=True)
-        if href and title:
-            out.write(f"{href}\t{title}\n")
-PYTHON
+          with open("articles/list.txt", "w", encoding="utf-8") as out:
+              for a in links:
+                  href = a.get("href")
+                  title = a.get_text(strip=True)
+                  if href and title:
+                      out.write(f"{href}\t{title}\n")
+          PYTHON
 
       - name: Publish new articles to Wiki
         run: |
