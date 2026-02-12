@@ -33,15 +33,13 @@ jobs:
       - name: Extract nav-link articles using Python
         run: |
           mkdir -p articles
-          python3 << 'EOF'
+          python3 - <<EOF
 import requests
 from bs4 import BeautifulSoup
 
-# بارگذاری فایل HTML
 with open("index.html", encoding="utf-8") as f:
     soup = BeautifulSoup(f, "html.parser")
 
-# پیدا کردن همه <a class="nav-link">
 links = soup.find_all("a", class_="nav-link")
 
 with open("articles/list.txt", "w", encoding="utf-8") as out:
@@ -65,14 +63,12 @@ EOF
 
             echo "Publishing: $title"
 
-            # دانلود محتوای مقاله
             curl -L "$url" -o article.html
 
-            # استخراج متن مقاله بین <article> و </article>
+            # استخراج متن مقاله بین <article> تا </article>
             sed -n '/<article/,/<\/article>/p' article.html \
               | sed 's/<[^>]*>//g' > body.txt
 
-            # ساخت فایل Wiki
             {
               echo "# $title"
               echo ""
