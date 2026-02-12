@@ -1,0 +1,50 @@
+name: Auto Link Wiki With Main Docs Page
+
+on:
+  schedule:
+    # Sunday 21:30 UTC = Monday 01:00 Iran
+    - cron: "30 21 * * 0"
+  workflow_dispatch:
+
+jobs:
+  link-wiki:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone Wiki
+        run: |
+          git clone https://github.com/intellsoft/timelapse-multi-camera.wiki.git wiki
+
+      - name: Add main source link to Wiki pages
+        run: |
+          cd wiki
+
+          SOURCE_URL="https://intellsoft.ir/docs/cctv-camera-timelapse-software-guide/"
+          TRACKED_URL="${SOURCE_URL}?utm_source=github_wiki&utm_medium=wiki&utm_campaign=timelapse_docs"
+
+          for file in *.md; do
+            [ -f "$file" ] || continue
+
+            # اگر لینک قبلاً وجود دارد، رد شود
+            if grep -q "cctv-camera-timelapse-software-guide" "$file"; then
+              echo "Source link already exists in $file"
+              continue
+            fi
+
+            echo "" >> "$file"
+            echo "---" >> "$file"
+            echo "🔗 **راهنمای کامل نرم‌افزار تایم‌لپس دوربین مداربسته:**" >> "$file"
+            echo "" >> "$file"
+            echo "👉 [$SOURCE_URL]($TRACKED_URL)" >> "$file"
+
+            echo "Linked $file to main documentation page"
+          done
+
+      - name: Commit and push changes
+        run: |
+          cd wiki
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Auto link Wiki pages to main documentation page" || exit 0
+          git push
