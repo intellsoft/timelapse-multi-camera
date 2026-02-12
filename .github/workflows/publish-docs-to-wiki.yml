@@ -6,14 +6,17 @@ on:
     - cron: "30 21 * * 0"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   link-wiki:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clone Wiki
+      - name: Clone Wiki (with auth)
         run: |
-          git clone https://github.com/intellsoft/timelapse-multi-camera.wiki.git wiki
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/intellsoft/timelapse-multi-camera.wiki.git wiki
 
       - name: Add main source link to Wiki pages
         run: |
@@ -25,9 +28,8 @@ jobs:
           for file in *.md; do
             [ -f "$file" ] || continue
 
-            # اگر لینک قبلاً وجود دارد، رد شود
             if grep -q "cctv-camera-timelapse-software-guide" "$file"; then
-              echo "Source link already exists in $file"
+              echo "Link already exists in $file"
               continue
             fi
 
@@ -36,8 +38,6 @@ jobs:
             echo "🔗 **راهنمای کامل نرم‌افزار تایم‌لپس دوربین مداربسته:**" >> "$file"
             echo "" >> "$file"
             echo "👉 [$SOURCE_URL]($TRACKED_URL)" >> "$file"
-
-            echo "Linked $file to main documentation page"
           done
 
       - name: Commit and push changes
