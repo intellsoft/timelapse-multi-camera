@@ -1,195 +1,532 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.seo.title }}</title>
-    <meta name="description" content="{{ site.seo.description }}">
-    <meta name="keywords" content="{{ site.seo.keywords | join: ', ' }}">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎥</text></svg>">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نرم‌افزار ضبط تایم‌لپس دوربین مداربسته | IntellSoft</title>
+    <meta name="description" content="نرم‌افزار پیشرفته ضبط تایم‌لپس دوربین مداربسته با قابلیت اتصال به دوربین‌های تحت شبکه، تنظیمات پیشرفته و ذخیره‌سازی بهینه. محصولی از IntellSoft." />
+    <link rel="canonical" href="https://intellsoft.ir/product/timelapse-camera-recorder/" />
+    <style>
+        /* ----- reset & base ----- */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-header: #0b1a2e;
+            --text-primary: #0b1a2e;
+            --text-secondary: #1e3a5f;
+            --text-muted: #475569;
+            --border-light: #e2e8f0;
+            --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            --shadow-hover: 0 20px 40px -12px rgba(0, 20, 40, 0.25);
+            --accent: #2563eb;
+            --accent-light: #dbeafe;
+            --radius: 20px;
+            --transition: 0.25s ease;
+            --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        [data-theme="dark"] {
+            --bg-page: #0f172a;
+            --bg-card: #1e293b;
+            --bg-header: #020617;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border-light: #334155;
+            --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            --shadow-hover: 0 20px 40px -12px rgba(0, 0, 0, 0.7);
+            --accent: #3b82f6;
+            --accent-light: #1e293b;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--font);
+            background: var(--bg-page);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background var(--transition), color var(--transition);
+            padding: 0 1rem;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 1.5rem 0 3rem;
+        }
+
+        /* ----- header / theme toggle ----- */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem 1.5rem;
+            padding: 1rem 1.5rem;
+            background: var(--bg-header);
+            border-radius: var(--radius);
+            color: #f1f5f9;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .page-header .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.3px;
+        }
+        .page-header .brand svg {
+            width: 32px;
+            height: 32px;
+            fill: #60a5fa;
+        }
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #f1f5f9;
+            padding: 0.5rem 1rem;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.2s;
+            backdrop-filter: blur(4px);
+        }
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+        .theme-toggle svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* ----- hero / product intro ----- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 2.5rem;
+            align-items: center;
+            border: 1px solid var(--border-light);
+            transition: background var(--transition), border var(--transition);
+        }
+        .hero-text h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+        .hero-text .sub {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+        }
+        .hero-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            max-width: 90%;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 0.25rem 1rem;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            margin-bottom: 0.75rem;
+            border: 1px solid var(--accent);
+        }
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 0.7rem 2rem;
+            border-radius: 60px;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.15s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: scale(1.02);
+            text-decoration: none;
+        }
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-page);
+            border-radius: 16px;
+            padding: 1.5rem;
+            min-height: 180px;
+            border: 1px dashed var(--border-light);
+            transition: background var(--transition), border var(--transition);
+        }
+        .hero-visual svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ----- features grid ----- */
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .feature-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 1.75rem 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            transition: background var(--transition), border var(--transition), transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .feature-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .feature-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.35rem;
+            color: var(--text-primary);
+        }
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ----- description & details ----- */
+        .info-block {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem 2.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            margin-bottom: 2.5rem;
+            transition: background var(--transition), border var(--transition);
+        }
+        .info-block h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+        .info-block p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        .info-block ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .info-block ul li {
+            color: var(--text-secondary);
+            padding: 0.3rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .info-block ul li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* ----- footer & link ----- */
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-light);
+            margin-top: 1rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .footer-links .official {
+            font-weight: 500;
+        }
+        .footer-links .official a {
+            font-weight: 600;
+        }
+
+        /* ----- responsive ----- */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 1.75rem;
+                text-align: center;
+            }
+            .hero-text p {
+                max-width: 100%;
+            }
+            .hero-visual {
+                min-height: 120px;
+                padding: 1rem;
+            }
+            .page-header {
+                padding: 0.75rem 1.25rem;
+            }
+            .info-block {
+                padding: 1.5rem;
+            }
+            .info-block ul {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            .footer-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                padding: 1.25rem;
+            }
+            .feature-card {
+                padding: 1.25rem;
+            }
+            .container {
+                padding: 0.5rem 0 2rem;
+            }
+            .theme-toggle span {
+                display: none;
+            }
+        }
+
+        /* ----- utilities ----- */
+        .text-center {
+            text-align: center;
+        }
+        .mt-1 {
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>{{ site.title }}</h1>
-                <p>{{ site.description }}</p>
-                <div class="cta-buttons">
-                    <a href="#download" class="btn primary-btn">دانلود نرم‌افزار</a>
-                    <a href="{{ site.github_repo }}" class="btn secondary-btn">مشاهده کد منبع</a>
-                </div>
+    <div class="container">
+
+        <!-- ====== HEADER ====== -->
+        <header class="page-header">
+            <div class="brand">
+                <!-- simple logo icon -->
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+                </svg>
+                <span>IntellSoft</span>
             </div>
-            <div class="header-image">
-                <img src="assets/screenshot.png" alt="نمای نرم‌افزار تایم‌لیپس چند دوربینه">
+            <button class="theme-toggle" id="themeToggle" aria-label="تغییر تم">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                    <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+                </svg>
+                <span>تم</span>
+            </button>
+        </header>
+
+        <!-- ====== HERO ====== -->
+        <section class="hero">
+            <div class="hero-text">
+                <div class="hero-badge">✨ جدیدترین نسخه</div>
+                <h1>ضبط‌کننده تایم‌لپس دوربین مداربسته</h1>
+                <div class="sub">Network Camera Recorder با قابلیت تایم‌لپس پیشرفته</div>
+                <p>
+                    با این نرم‌افزار حرفه‌ای، دوربین‌های تحت شبکه خود را به یک ابزار قدرتمند
+                    برای ثبت تایم‌لپس از پروژه‌های عمرانی، طبیعت و رویدادهای روزمره تبدیل کنید.
+                </p>
+                <a href="https://intellsoft.ir/product/timelapse-camera-recorder/" class="btn-primary" target="_blank" rel="noopener">
+                    مشاهده در سایت اصلی
+                </a>
+            </div>
+            <div class="hero-visual">
+                <!-- camera / timelapse illustration (inline SVG) -->
+                <svg width="200" height="140" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="30" width="180" height="100" rx="16" stroke="var(--text-secondary)" stroke-width="2.5" fill="var(--bg-card)" />
+                    <circle cx="100" cy="80" r="28" stroke="var(--accent)" stroke-width="2.5" fill="var(--accent-light)" />
+                    <circle cx="100" cy="80" r="12" fill="var(--accent)" />
+                    <rect x="40" y="20" width="120" height="16" rx="8" fill="var(--bg-header)" />
+                    <circle cx="62" cy="28" r="5" fill="#facc15" />
+                    <circle cx="78" cy="28" r="5" fill="#22c55e" />
+                    <circle cx="94" cy="28" r="5" fill="#ef4444" />
+                    <path d="M30 130 L170 130" stroke="var(--border-light)" stroke-width="2" stroke-dasharray="6 6" />
+                    <text x="100" y="150" font-size="10" fill="var(--text-muted)" text-anchor="middle" font-family="Segoe UI, sans-serif">Timelapse Recorder</text>
+                </svg>
+            </div>
+        </section>
+
+        <!-- ====== FEATURES ====== -->
+        <h2 class="section-title">⚡ ویژگی‌های کلیدی</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="icon">📹</span>
+                <h3>اتصال به دوربین‌های تحت شبکه</h3>
+                <p>پشتیبانی از اکثر دوربین‌های IP و آنالوگ جهت ضبط تایم‌لپس بدون دردسر.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">⏱️</span>
+                <h3>تنظیم بازه‌های زمانی دلخواه</h3>
+                <p>فواصل ثبت تصویر را از چند ثانیه تا چند ساعت تنظیم کنید.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">💾</span>
+                <h3>ذخیره‌سازی بهینه</h3>
+                <p>کاهش حجم ذخیره‌سازی با ضبط تنها لحظات کلیدی و حرکت‌ها.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">🎛️</span>
+                <h3>رابط کاربری ساده و حرفه‌ای</h3>
+                <p>مدیریت آسان تنظیمات تایم‌لپس، نرخ فریم و رزولوشن خروجی.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">🧠</span>
+                <h3>تشخیص حرکت هوشمند</h3>
+                <p>الگوریتم‌های پیشرفته برای شناسایی خودکار رویدادهای مهم.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">🔄</span>
+                <h3>سازگاری با چند دوربین</h3>
+                <p>امکان اتصال همزمان چند دوربین و ساخت تایم‌لپس ترکیبی.</p>
             </div>
         </div>
-    </header>
 
-    <main class="container">
-        <section id="features">
-            <h2>ویژگی‌های اصلی</h2>
-            <div class="features-grid">
-                {% for feature in site.features %}
-                <div class="feature-card">
-                    <div class="feature-icon">{{ feature.icon }}</div>
-                    <h3>{{ feature.title }}</h3>
-                    <p>{{ feature.description }}</p>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
+        <!-- ====== INFO BLOCK ====== -->
+        <div class="info-block">
+            <h2>📌 درباره محصول</h2>
+            <p>
+                <strong>نرم‌افزار ضبط تایم‌لپس دوربین مداربسته</strong> محصولی از <strong>IntellSoft</strong> است
+                که با هدف تبدیل دوربین‌های نظارتی به ابزاری خلاقانه برای ثبت تغییرات در طول زمان طراحی شده است.
+                این نرم‌افزار با اتصال به دوربین‌های تحت شبکه، تصاویر را در بازه‌های زمانی مشخص ذخیره کرده و
+                خروجی با کیفیت بالا ارائه می‌دهد.
+            </p>
+            <p>
+                از جمله کاربردهای اصلی آن می‌توان به <strong>پایش پیشرفت پروژه‌های ساختمانی</strong>،
+                <strong>مستندسازی تغییرات طبیعت</strong>، <strong>تحلیل امنیتی</strong> و
+                <strong>ایجاد محتوای جذاب تایم‌لپس</strong> اشاره کرد.
+            </p>
+            <ul>
+                <li>پشتیبانی از دوربین‌های IP و آنالوگ</li>
+                <li>تنظیم فاصله زمانی بین ثبت تصاویر</li>
+                <li>خروجی با کیفیت و نرخ فریم قابل تنظیم</li>
+                <li>ذخیره‌سازی هوشمند و کاهش حجم داده</li>
+                <li>تشخیص حرکت و رویدادهای مهم</li>
+                <li>رابط کاربری گرافیکی ساده و روان</li>
+            </ul>
+        </div>
 
-        <section id="applications">
-            <h2>کاربردهای نرم‌افزار</h2>
-            <div class="applications-container">
-                <ul class="applications-list">
-                    {% for application in site.applications %}
-                    <li>{{ application }}</li>
-                    {% endfor %}
-                </ul>
+        <!-- ====== FOOTER ====== -->
+        <div class="footer-links">
+            <div class="official">
+                🔗 <strong>سایت رسمی:</strong>
+                <a href="https://intellsoft.ir/product/timelapse-camera-recorder/" target="_blank" rel="noopener">
+                    intellsoft.ir/product/timelapse-camera-recorder
+                </a>
             </div>
-        </section>
-
-        <section id="workflow">
-            <h2>گردش کار نرم‌افزار</h2>
-            <div class="workflow-steps">
-                <div class="workflow-step">
-                    <div class="step-icon">1</div>
-                    <h3>اتصال دوربین‌ها</h3>
-                    <p>دوربین‌های DSLR، وب کم یا موبایل را به سیستم متصل کنید</p>
-                </div>
-                <div class="workflow-step">
-                    <div class="step-icon">2</div>
-                    <h3>پیکربندی تنظیمات</h3>
-                    <p>فواصل زمانی، مدت ثبت و تنظیمات هر دوربین را مشخص کنید</p>
-                </div>
-                <div class="workflow-step">
-                    <div class="step-icon">3</div>
-                    <h3>شروع ثبت تصاویر</h3>
-                    <p>فرآیند ثبت همزمان تصاویر از تمام دوربین‌ها را آغاز کنید</p>
-                </div>
-                <div class="workflow-step">
-                    <div class="step-icon">4</div>
-                    <h3>تولید ویدیو نهایی</h3>
-                    <p>تصاویر را به ویدیو تایم‌لیپس تبدیل و خروجی بگیرید</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="camera-support">
-            <h2>دوربین‌های پشتیبانی شده</h2>
-            <div class="camera-types">
-                <div class="camera-type">
-                    <h3>📷 دوربین‌های DSLR</h3>
-                    <p>پشتیبانی از برندهای Canon, Nikon, Sony و سایر DSLRها</p>
-                </div>
-                <div class="camera-type">
-                    <h3>📱 دوربین‌های موبایل</h3>
-                    <p>اتصال گوشی‌های Android و iOS به عنوان دوربین</p>
-                </div>
-                <div class="camera-type">
-                    <h3>💻 وب‌کم‌ها</h3>
-                    <p>استفاده از وب‌کم‌های USB و لپ‌تاپ</p>
-                </div>
-                <div class="camera-type">
-                    <h3>📹 دوربین‌های IP</h3>
-                    <p>پشتیبانی از دوربین‌های تحت شبکه</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="download">
-            <h2>دانلود نرم‌افزار</h2>
-            <div class="download-section">
-                <div class="version-info">
-                    <p>نسخه فعلی: <strong>1.4.0</strong></p>
-                    <p>حجم: <strong>35MB</strong></p>
-                    <div class="system-requirements">
-                        <h3>نیازمندی‌های سیستم:</h3>
-                        <ul>
-                            <li>ویندوز 10/11 یا مک‌اواس</li>
-                            <li>حداقل 8GB RAM</li>
-                            <li>فضای خالی دیسک: 500MB</li>
-                            <li>پورت USB 3.0</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="download-options">
-                    <div class="download-buttons">
-                        <a href="#" class="btn download-btn">
-                            <span class="os-icon">🪟</span>
-                            نسخه ویندوز
-                        </a>
-                        <a href="#" class="btn download-btn">
-                            <span class="os-icon">🍎</span>
-                            نسخه مک‌اواس
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="examples">
-            <h2>نمونه کارهای ایجاد شده</h2>
-            <div class="examples-container">
-                <div class="example">
-                    <div class="example-video">
-                        <div class="video-placeholder" style="background-image: url('assets/example1-thumb.jpg')">
-                            <div class="play-icon">▶</div>
-                        </div>
-                    </div>
-                    <h3>تایم‌لیپس مراسم عروسی</h3>
-                    <p>3 دوربین - 8 ساعت ثبت</p>
-                </div>
-                <div class="example">
-                    <div class="example-video">
-                        <div class="video-placeholder" style="background-image: url('assets/example2-thumb.jpg')">
-                            <div class="play-icon">▶</div>
-                        </div>
-                    </div>
-                    <h3>پروژه ساخت‌وساز ساختمان</h3>
-                    <p>5 دوربین - 6 ماه ثبت</p>
-                </div>
-                <div class="example">
-                    <div class="example-video">
-                        <div class="video-placeholder" style="background-image: url('assets/example3-thumb.jpg')">
-                            <div class="play-icon">▶</div>
-                        </div>
-                    </div>
-                    <h3>رشد گیاهان گلخانه‌ای</h3>
-                    <p>4 دوربین - 30 روز ثبت</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>نرم‌افزار تایم‌لیپس چند دوربینه</h3>
-                    <p>راه‌حل حرفه‌ای برای تولید تایم‌لیپس‌های چند زاویه‌ای</p>
-                </div>
-                <div class="footer-links">
-                    <h4>لینک‌های مفید</h4>
-                    <ul>
-                        <li><a href="{{ site.github_repo }}">صفحه پروژه در GitHub</a></li>
-                        <li><a href="{{ site.author.url }}">وبسایت اینتل سافت</a></li>
-                        <li><a href="mailto:{{ site.author.email }}">پشتیبانی فنی</a></li>
-                        <li><a href="#">آموزش‌های ویدیویی</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>ارتباط با ما</h4>
-                    <p>ایمیل: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
-                    <p>وبسایت: <a href="{{ site.author.url }}">{{ site.author.url }}</a></p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© {{ site.time | date: '%Y' }} توسعه داده شده توسط {{ site.author.name }}. تمامی حقوق محفوظ است.</p>
+            <div>
+                <span style="opacity:0.7;">© ۱۴۰۵ – IntellSoft</span>
             </div>
         </div>
-    </footer>
+
+    </div>
+
+    <!-- ====== THEME SCRIPT (with localStorage) ====== -->
+    <script>
+        (function() {
+            const toggleBtn = document.getElementById('themeToggle');
+            const html = document.documentElement;
+
+            // get stored theme or system preference
+            const stored = localStorage.getItem('theme');
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            let currentTheme = stored || (systemDark ? 'dark' : 'light');
+
+            function applyTheme(theme) {
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                // update toggle button text (optional)
+                const span = toggleBtn.querySelector('span');
+                if (span) {
+                    span.textContent = theme === 'dark' ? 'روشن' : 'تاریک';
+                }
+                // update icon (simple sun/moon)
+                const svg = toggleBtn.querySelector('svg');
+                if (svg) {
+                    if (theme === 'dark') {
+                        svg.innerHTML =
+                            `<path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>`;
+                    } else {
+                        svg.innerHTML =
+                            `<path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>`;
+                    }
+                }
+            }
+
+            applyTheme(currentTheme);
+
+            toggleBtn.addEventListener('click', function() {
+                const current = html.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                applyTheme(next);
+            });
+
+            // optional: listen to system changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+                if (!localStorage.getItem('theme')) {
+                    applyTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
