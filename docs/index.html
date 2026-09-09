@@ -1,532 +1,1406 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>نرم‌افزار ضبط تایم‌لپس دوربین مداربسته | IntellSoft</title>
-    <meta name="description" content="نرم‌افزار پیشرفته ضبط تایم‌لپس دوربین مداربسته با قابلیت اتصال به دوربین‌های تحت شبکه، تنظیمات پیشرفته و ذخیره‌سازی بهینه. محصولی از IntellSoft." />
-    <link rel="canonical" href="https://intellsoft.ir/product/timelapse-camera-recorder/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#05070f">
+
+    <!-- ===================== SEO ===================== -->
+    <title>تایم‌لپس رکوردر | نرم‌افزار ضبط تایم‌لپس دوربین‌های IP برای ویندوز — IntellSoft</title>
+    <meta name="description" content="نرم‌افزار تایم‌لپس رکوردر برای ضبط خودکار تصاویر از دوربین‌های تحت شبکه با پروتکل RTSP و ONVIF؛ کشف خودکار دوربین، ضبط همزمان چند دوربین، رمزنگاری اطلاعات و مانیتورینگ منابع. رایگان برای ویندوز.">
+    <meta name="keywords" content="تایم‌لپس, timelapse, دوربین IP, RTSP, ONVIF, ضبط تایم لپس, نظارت تصویری, ساخت ویدیو تایم لپس, پروژه ساختمانی, نرم افزار ویندوز, IntellSoft">
+    <meta name="author" content="Ali Abbaspor — IntellSoft">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://intellsoft.ir/product/timelapse-camera-recorder/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="IntellSoft">
+    <meta property="og:locale" content="fa_IR">
+    <meta property="og:title" content="تایم‌لپس رکوردر | ضبط هوشمند تایم‌لپس از دوربین‌های IP">
+    <meta property="og:description" content="کشف خودکار دوربین با ONVIF، ضبط همزمان چند دوربین، امنیت رمزنگاری‌شده — رایگان برای ویندوز.">
+    <meta property="og:url" content="https://intellsoft.ir/timelapse">
+    
+    <meta property="og:image" content="https://github.com/intellsoft/timelapse-multi-camera/blob/main/docs/timelapse-software.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="تایم‌لپس رکوردر — ضبط هوشمند از دوربین‌های IP">
+    <meta name="twitter:description" content="کشف خودکار ONVIF، چند دوربین همزمان، رایگان برای ویندوز.">
+    <meta name="twitter:image" content="https://intellsoft.ir/timelapse/og-cover.jpg">
+
+    <!-- Favicon (بدون فایل خارجی) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z' fill='%236366f1'/%3E%3Ccircle cx='12' cy='13' r='4' fill='%2305070f'/%3E%3C/svg%3E">
+
+    <!-- فونت وزیرمتن -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- داده ساختاریافته: نرم‌افزار -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Timelapse Recorder",
+      "alternateName": "تایم‌لپس رکوردر",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Windows 7, Windows 10, Windows 11",
+      "softwareVersion": "1.0",
+      "inLanguage": "fa",
+      "description": "نرم‌افزار ضبط تایم‌لپس از دوربین‌های IP با پشتیبانی RTSP و ONVIF، کشف خودکار دوربین، ضبط همزمان چند دوربین و رمزنگاری اطلاعات.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "IRR" },
+      "author": { "@type": "Organization", "name": "IntellSoft", "url": "https://intellsoft.ir" },
+      "featureList": [
+        "کشف خودکار دوربین با ONVIF",
+        "ضبط در بازه زمانی دلخواه یا ساعات مشخص",
+        "مدیریت همزمان چند دوربین",
+        "رمزنگاری اعتبارنامه‌های RTSP",
+        "مانیتورینگ حافظه و فضای دیسک",
+        "یکپارچگی با FFmpeg"
+      ]
+    }
+    </script>
+
+    <!-- داده ساختاریافته: سوالات متداول -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "آیا نرم‌افزار تایم‌لپس رکوردر رایگان است؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "بله، نسخه فعلی کاملاً رایگان و بدون محدودیت است." } },
+        { "@type": "Question", "name": "چه دوربین‌هایی پشتیبانی می‌شوند؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "هر دوربین تحت شبکه‌ای که پروتکل RTSP یا ONVIF را پشتیبانی کند؛ شامل اکثر برندهای رایج بازار." } },
+        { "@type": "Question", "name": "آیا برای استفاده به اینترنت نیاز است؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "خیر، نرم‌افزار فقط با شبکه محلی کار می‌کند و به اینترنت نیازی ندارد." } },
+        { "@type": "Question", "name": "اطلاعات ورود دوربین من چگونه حفظ می‌شود؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "اعتبارنامه‌های RTSP به‌صورت رمزنگاری‌شده در فایل پیکربندی ذخیره می‌شوند و هرگز به‌صورت خام نوشته نمی‌شوند." } },
+        { "@type": "Question", "name": "چند دوربین می‌توانم همزمان داشته باشم؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "محدودیتی وجود ندارد؛ هر دوربین در یک نخ مستقل و پایدار اجرا می‌شود." } },
+        { "@type": "Question", "name": "خروجی نهایی نرم‌افزار چیست؟",
+          "acceptedAnswer": { "@type": "Answer", "text": "تصاویر JPG با کیفیت اصلی در ساختار پوشه IP/سال/ماه/روز ذخیره می‌شوند و به‌راحتی با FFmpeg به ویدیو تبدیل می‌شوند." } }
+      ]
+    }
+    </script>
+
     <style>
-        /* ----- reset & base ----- */
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        :root {
-            --bg-page: #f8fafc;
-            --bg-card: #ffffff;
-            --bg-header: #0b1a2e;
-            --text-primary: #0b1a2e;
-            --text-secondary: #1e3a5f;
-            --text-muted: #475569;
-            --border-light: #e2e8f0;
-            --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-            --shadow-hover: 0 20px 40px -12px rgba(0, 20, 40, 0.25);
-            --accent: #2563eb;
-            --accent-light: #dbeafe;
-            --radius: 20px;
-            --transition: 0.25s ease;
-            --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
-        }
-        [data-theme="dark"] {
-            --bg-page: #0f172a;
-            --bg-card: #1e293b;
-            --bg-header: #020617;
-            --text-primary: #f1f5f9;
-            --text-secondary: #cbd5e1;
-            --text-muted: #94a3b8;
-            --border-light: #334155;
-            --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
-            --shadow-hover: 0 20px 40px -12px rgba(0, 0, 0, 0.7);
-            --accent: #3b82f6;
-            --accent-light: #1e293b;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: var(--font);
-            background: var(--bg-page);
-            color: var(--text-primary);
-            line-height: 1.6;
-            transition: background var(--transition), color var(--transition);
-            padding: 0 1rem;
-        }
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 1.5rem 0 3rem;
-        }
+    /* ============================================================
+       ۱) متغیرها و پایه
+    ============================================================ */
+    :root{
+      --bg-0:#04060c; --bg-1:#0a0f1e; --bg-2:#0f1629;
+      --surface:rgba(17,24,42,.6); --surface-2:rgba(22,31,55,.7);
+      --border:rgba(148,163,184,.14); --border-hi:rgba(99,102,241,.5);
+      --text:#e6eaf2; --muted:#94a3b8; --muted-2:#64748b;
+      --primary:#6366f1; --primary-2:#818cf8; --violet:#a78bfa;
+      --accent:#22d3ee; --live:#f43f5e; --ok:#34d399;
+      --grad-1:linear-gradient(135deg,#6366f1,#a855f7);
+      --grad-text:linear-gradient(120deg,#818cf8,#22d3ee 55%,#a78bfa);
+      --r-lg:22px; --r-md:16px; --r-sm:12px;
+      --nav-h:72px;
+      --font-mono:'Courier New',ui-monospace,monospace;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px)}
+    body{
+      font-family:'Vazirmatn',sans-serif;background:var(--bg-0);color:var(--text);
+      line-height:1.8;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+    }
+    ::selection{background:rgba(99,102,241,.45);color:#fff}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    ul,ol{list-style:none}
+    h1,h2,h3{line-height:1.35}
+    :focus-visible{outline:2px solid var(--primary-2);outline-offset:3px;border-radius:4px}
 
-        /* ----- header / theme toggle ----- */
-        .page-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem 1.5rem;
-            padding: 1rem 1.5rem;
-            background: var(--bg-header);
-            border-radius: var(--radius);
-            color: #f1f5f9;
-            margin-bottom: 2.5rem;
-            box-shadow: var(--shadow-sm);
-        }
-        .page-header .brand {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 700;
-            font-size: 1.25rem;
-            letter-spacing: -0.3px;
-        }
-        .page-header .brand svg {
-            width: 32px;
-            height: 32px;
-            fill: #60a5fa;
-        }
-        .theme-toggle {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            color: #f1f5f9;
-            padding: 0.5rem 1rem;
-            border-radius: 60px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: background 0.2s;
-            backdrop-filter: blur(4px);
-        }
-        .theme-toggle:hover {
-            background: rgba(255, 255, 255, 0.18);
-        }
-        .theme-toggle svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
+    /* اسکرول‌بار سفارشی */
+    html{scrollbar-color:#334155 var(--bg-0)}
+    ::-webkit-scrollbar{width:10px}
+    ::-webkit-scrollbar-track{background:var(--bg-0)}
+    ::-webkit-scrollbar-thumb{background:#2a3654;border-radius:8px;border:2px solid var(--bg-0)}
+    ::-webkit-scrollbar-thumb:hover{background:#3b4a6e}
 
-        /* ----- hero / product intro ----- */
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            padding: 2.5rem;
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 2.5rem;
-            align-items: center;
-            border: 1px solid var(--border-light);
-            transition: background var(--transition), border var(--transition);
-        }
-        .hero-text h1 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 0.75rem;
-            color: var(--text-primary);
-        }
-        .hero-text .sub {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.25rem;
-        }
-        .hero-text p {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            max-width: 90%;
-        }
-        .hero-badge {
-            display: inline-block;
-            background: var(--accent-light);
-            color: var(--accent);
-            padding: 0.25rem 1rem;
-            border-radius: 60px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-            margin-bottom: 0.75rem;
-            border: 1px solid var(--accent);
-        }
-        .btn-primary {
-            display: inline-block;
-            background: var(--accent);
-            color: #fff;
-            padding: 0.7rem 2rem;
-            border-radius: 60px;
-            font-weight: 600;
-            transition: background 0.2s, transform 0.15s;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        .btn-primary:hover {
-            background: #1d4ed8;
-            transform: scale(1.02);
-            text-decoration: none;
-        }
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: var(--bg-page);
-            border-radius: 16px;
-            padding: 1.5rem;
-            min-height: 180px;
-            border: 1px dashed var(--border-light);
-            transition: background var(--transition), border var(--transition);
-        }
-        .hero-visual svg {
-            max-width: 100%;
-            height: auto;
-        }
+    /* شبکه پس‌زمینه + نویز */
+    body::before{
+      content:'';position:fixed;inset:0;z-index:-3;pointer-events:none;
+      background-image:
+        linear-gradient(rgba(148,163,184,.05) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(148,163,184,.05) 1px,transparent 1px);
+      background-size:52px 52px;
+      -webkit-mask-image:radial-gradient(ellipse 90% 65% at 50% 0%,#000 25%,transparent 78%);
+              mask-image:radial-gradient(ellipse 90% 65% at 50% 0%,#000 25%,transparent 78%);
+    }
+    body::after{
+      content:'';position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.55;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+    }
 
-        /* ----- features grid ----- */
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-        }
-        .feature-card {
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            padding: 1.75rem 1.5rem;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-light);
-            transition: background var(--transition), border var(--transition), transform 0.2s, box-shadow 0.2s;
-        }
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-hover);
-        }
-        .feature-card .icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        .feature-card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 0.35rem;
-            color: var(--text-primary);
-        }
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
+    /* لینک پرش برای دسترس‌پذیری */
+    .skip-link{
+      position:fixed;top:-60px;right:1rem;z-index:3000;background:var(--primary);color:#fff;
+      padding:.6rem 1.2rem;border-radius:8px;transition:top .25s;font-weight:600;
+    }
+    .skip-link:focus{top:1rem}
 
-        /* ----- description & details ----- */
-        .info-block {
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            padding: 2rem 2.5rem;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-light);
-            margin-bottom: 2.5rem;
-            transition: background var(--transition), border var(--transition);
-        }
-        .info-block h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-primary);
-        }
-        .info-block p {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-        .info-block ul {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.5rem 1.5rem;
-            margin-top: 0.5rem;
-        }
-        .info-block ul li {
-            color: var(--text-secondary);
-            padding: 0.3rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .info-block ul li::before {
-            content: "✓";
-            color: var(--accent);
-            font-weight: 700;
-        }
+    .container{max-width:1240px;margin-inline:auto;padding-inline:5%}
 
-        /* ----- footer & link ----- */
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-light);
-            margin-top: 1rem;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-        .footer-links .official {
-            font-weight: 500;
-        }
-        .footer-links .official a {
-            font-weight: 600;
-        }
+    /* ============================================================
+       ۲) نوار پیشرفت، هاله‌ی نشانگر، ذرات
+    ============================================================ */
+    #progressBar{
+      position:fixed;top:0;right:0;left:0;height:3px;z-index:2000;
+      background:linear-gradient(90deg,var(--accent),var(--primary),var(--violet));
+      transform-origin:right;transform:scaleX(0);
+    }
+    #cursorGlow{
+      position:fixed;top:0;left:0;width:700px;height:700px;z-index:-1;pointer-events:none;
+      border-radius:50%;mix-blend-mode:screen;will-change:transform;
+      background:radial-gradient(circle,rgba(99,102,241,.09) 0%,rgba(34,211,238,.05) 35%,transparent 65%);
+    }
+    @media (pointer:coarse){#cursorGlow{display:none}}
+    #particles{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+    .particle{
+      position:absolute;border-radius:50%;background:var(--primary-2);bottom:-12px;
+      animation:rise linear infinite;
+    }
+    @keyframes rise{
+      0%{transform:translateY(0) translateX(0);opacity:0}
+      8%{opacity:var(--o,.3)} 92%{opacity:var(--o,.3)}
+      100%{transform:translateY(-108vh) translateX(-60px);opacity:0}
+    }
 
-        /* ----- responsive ----- */
-        @media (max-width: 768px) {
-            .hero {
-                grid-template-columns: 1fr;
-                padding: 1.75rem;
-                text-align: center;
-            }
-            .hero-text p {
-                max-width: 100%;
-            }
-            .hero-visual {
-                min-height: 120px;
-                padding: 1rem;
-            }
-            .page-header {
-                padding: 0.75rem 1.25rem;
-            }
-            .info-block {
-                padding: 1.5rem;
-            }
-            .info-block ul {
-                grid-template-columns: 1fr;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
-            .hero-text h1 {
-                font-size: 1.8rem;
-            }
-            .footer-links {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-        @media (max-width: 480px) {
-            .hero {
-                padding: 1.25rem;
-            }
-            .feature-card {
-                padding: 1.25rem;
-            }
-            .container {
-                padding: 0.5rem 0 2rem;
-            }
-            .theme-toggle span {
-                display: none;
-            }
-        }
+    /* ============================================================
+       ۳) ناوبری
+    ============================================================ */
+    .nav{
+      position:fixed;top:0;right:0;left:0;height:var(--nav-h);z-index:1000;
+      background:rgba(6,9,18,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--border);transition:height .3s,background .3s;
+    }
+    .nav.scrolled{height:60px;background:rgba(6,9,18,.92)}
+    .nav-inner{max-width:1240px;height:100%;margin-inline:auto;padding-inline:5%;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .logo{display:flex;align-items:center;gap:.7rem;font-weight:800;font-size:1.15rem}
+    .logo-mark{
+      width:38px;height:38px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto;
+      background:var(--grad-1);box-shadow:0 6px 18px rgba(99,102,241,.45);
+    }
+    .logo-mark svg{width:20px;height:20px;stroke:#fff}
+    .logo small{display:block;font-size:.62rem;color:var(--muted-2);font-weight:500;margin-top:-4px}
+    .nav-links{display:flex;align-items:center;gap:1.8rem}
+    .nav-link{font-size:.95rem;font-weight:500;color:var(--muted);position:relative;padding:.3rem 0;transition:color .25s}
+    .nav-link::after{
+      content:'';position:absolute;bottom:-2px;right:0;width:0;height:2px;border-radius:2px;
+      background:linear-gradient(90deg,var(--accent),var(--primary));transition:width .3s;
+    }
+    .nav-link:hover,.nav-link.active{color:var(--text)}
+    .nav-link:hover::after,.nav-link.active::after{width:100%}
+    .nav-cta{
+      padding:.55rem 1.3rem;border-radius:99px;font-size:.9rem;font-weight:700;
+      background:var(--grad-1);color:#fff;box-shadow:0 4px 16px rgba(99,102,241,.4);
+      transition:box-shadow .3s,transform .3s;white-space:nowrap;
+    }
+    .nav-cta:hover{box-shadow:0 8px 24px rgba(99,102,241,.6)}
+    .burger{display:none;background:none;border:0;cursor:pointer;width:42px;height:42px;position:relative;z-index:1001}
+    .burger span{position:absolute;right:8px;width:26px;height:2.5px;border-radius:3px;background:var(--text);transition:.35s}
+    .burger span:nth-child(1){top:13px}.burger span:nth-child(2){top:20.5px}.burger span:nth-child(3){top:28px}
+    .burger.open span:nth-child(1){top:20.5px;transform:rotate(45deg)}
+    .burger.open span:nth-child(2){opacity:0}
+    .burger.open span:nth-child(3){top:20.5px;transform:rotate(-45deg)}
+    #mobileMenu{
+      position:fixed;top:0;right:0;left:0;z-index:999;padding:5.5rem 8% 1.5rem;
+      background:rgba(6,9,18,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);
+      transform:translateY(-110%);transition:transform .4s cubic-bezier(.2,.8,.3,1);
+    }
+    #mobileMenu.open{transform:none}
+    #mobileMenu a{display:block;padding:.85rem .25rem;font-size:1.05rem;font-weight:600;color:var(--muted);border-bottom:1px dashed var(--border)}
+    #mobileMenu a:hover{color:var(--text)}
+    @media (max-width:880px){
+      .nav-links{display:none}
+      .burger{display:block}
+      .nav-cta{display:none}
+    }
 
-        /* ----- utilities ----- */
-        .text-center {
-            text-align: center;
-        }
-        .mt-1 {
-            margin-top: 1rem;
-        }
+    /* ============================================================
+       ۴) دکمه‌ها
+    ============================================================ */
+    .btn{
+      position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:.6rem;
+      padding:1rem 2rem;border-radius:14px;font:inherit;font-weight:700;font-size:1rem;
+      cursor:pointer;border:none;transition:transform .25s,box-shadow .25s,background .25s,border-color .25s;
+    }
+    .btn-primary{
+      background:var(--grad-1);color:#fff;box-shadow:0 8px 24px rgba(99,102,241,.45);
+    }
+    .btn-primary:hover{box-shadow:0 14px 36px rgba(99,102,241,.6)}
+    .btn-ghost{background:rgba(255,255,255,.03);color:var(--text);border:1px solid rgba(148,163,184,.3)}
+    .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(148,163,184,.5)}
+    .btn svg{width:20px;height:20px}
+    .ripple{
+      position:absolute;border-radius:50%;background:rgba(255,255,255,.35);
+      transform:scale(0);animation:ripple .65s ease-out forwards;pointer-events:none;
+    }
+    @keyframes ripple{to{transform:scale(1);opacity:0}}
+    .magnetic{will-change:transform}
+
+    /* ============================================================
+       ۵) هیرو
+    ============================================================ */
+    .hero{
+      min-height:100svh;display:flex;align-items:center;position:relative;
+      padding:calc(var(--nav-h) + 3rem) 0 4.5rem;
+    }
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center}
+    .hero-badge{
+      display:inline-flex;align-items:center;gap:.55rem;padding:.45rem 1rem;border-radius:99px;
+      background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.25);
+      color:var(--accent);font-size:.82rem;font-weight:600;margin-bottom:1.4rem;
+    }
+    .hero-badge i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:ping 2s infinite}
+    @keyframes ping{70%{box-shadow:0 0 0 9px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+    .hero h1{font-size:clamp(1.9rem,4.2vw,3.3rem);font-weight:900;margin-bottom:1.3rem}
+    .grad{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+    .hero-sub{color:var(--muted);font-size:clamp(1rem,1.6vw,1.2rem);max-width:34rem;margin-bottom:2.2rem}
+    .hero-sub b{color:var(--text);font-weight:700}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:2rem}
+    .hero-trust{display:flex;flex-wrap:wrap;gap:1.4rem;color:var(--muted-2);font-size:.85rem}
+    .hero-trust span{display:inline-flex;align-items:center;gap:.4rem}
+    .hero-trust svg{width:16px;height:16px;stroke:var(--ok);flex:0 0 auto}
+
+    /* — مانیتور شبیه‌سازی ضبط (لحظه‌ی امضای صفحه) — */
+    .hero-visual{position:relative;will-change:transform}
+    .hero-visual::before{
+      content:'';position:absolute;inset:-8%;z-index:-1;border-radius:40px;filter:blur(70px);
+      background:radial-gradient(circle at 60% 40%,rgba(99,102,241,.28),transparent 60%),
+                 radial-gradient(circle at 30% 70%,rgba(34,211,238,.18),transparent 60%);
+    }
+    .monitor-float{animation:bob 7s ease-in-out infinite}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+    .monitor{
+      background:linear-gradient(165deg,#131c34,#0a0f1e);direction:ltr;
+      border:1px solid rgba(148,163,184,.2);border-radius:18px;overflow:hidden;
+      box-shadow:0 40px 90px -25px rgba(2,6,23,.95);transition:transform .3s ease-out;
+      transform-style:preserve-3d;
+    }
+    .monitor-head{
+      display:flex;align-items:center;gap:.9rem;padding:.75rem 1.1rem;
+      border-bottom:1px solid rgba(148,163,184,.14);
+      font:600 .72rem/1 var(--font-mono);color:#8ea3c8;
+    }
+    .m-dots{display:flex;gap:6px}
+    .m-dots i{width:10px;height:10px;border-radius:50%;background:#33415e}
+    .m-dots i:first-child{background:#f87171}.m-dots i:nth-child(2){background:#fbbf24}.m-dots i:nth-child(3){background:#34d399}
+    .m-title{flex:1;text-align:center;letter-spacing:.05em}
+    .rec{display:inline-flex;align-items:center;gap:.4rem;color:#fda4af;font-weight:700;letter-spacing:.12em}
+    .rec i{width:9px;height:9px;border-radius:50%;background:var(--live);box-shadow:0 0 12px var(--live);animation:blink 1.5s infinite}
+    @keyframes blink{50%{opacity:.25}}
+
+    .view{position:relative;aspect-ratio:16/9;overflow:hidden;background:#060a14}
+    .view::before{ /* شبکه دوربین */
+      content:'';position:absolute;inset:0;z-index:2;
+      background-image:
+        linear-gradient(rgba(34,211,238,.06) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(34,211,238,.06) 1px,transparent 1px);
+      background-size:34px 34px;
+    }
+    .view::after{ /* وینیت */
+      content:'';position:absolute;inset:0;z-index:3;pointer-events:none;
+      box-shadow:inset 0 0 90px 25px rgba(2,4,10,.85);
+    }
+    .blob{position:absolute;border-radius:50%;filter:blur(45px);opacity:.75;z-index:1}
+    .blob.b1{width:55%;height:60%;top:8%;left:6%;background:radial-gradient(circle,#1e3a5f,transparent 70%);animation:drift1 12s ease-in-out infinite alternate}
+    .blob.b2{width:45%;height:55%;bottom:0;right:2%;background:radial-gradient(circle,#31264f,transparent 70%);animation:drift2 15s ease-in-out infinite alternate}
+    .blob.b3{width:30%;height:35%;top:35%;left:40%;background:radial-gradient(circle,#0e4d55,transparent 70%);animation:drift1 10s 2s ease-in-out infinite alternate-reverse}
+    @keyframes drift1{to{transform:translate(12%,10%) scale(1.15)}}
+    @keyframes drift2{to{transform:translate(-10%,-14%) scale(.9)}}
+    .scanline{
+      position:absolute;left:0;right:0;height:70px;z-index:4;pointer-events:none;
+      background:linear-gradient(to bottom,transparent,rgba(34,211,238,.14),transparent);
+      animation:scan 4.5s linear infinite;
+    }
+    @keyframes scan{from{top:-20%}to{top:115%}}
+    .corner{position:absolute;width:24px;height:24px;z-index:5;pointer-events:none;border:0 solid rgba(34,211,238,.75)}
+    .c1{top:12px;left:12px;border-top-width:2.5px;border-left-width:2.5px;border-radius:6px 0 0 0}
+    .c2{top:12px;right:12px;border-top-width:2.5px;border-right-width:2.5px;border-radius:0 6px 0 0}
+    .c3{bottom:12px;left:12px;border-bottom-width:2.5px;border-left-width:2.5px;border-radius:0 0 0 6px}
+    .c4{bottom:12px;right:12px;border-bottom-width:2.5px;border-right-width:2.5px;border-radius:0 0 6px 0}
+    .reticle{position:absolute;top:50%;left:50%;width:26px;height:26px;transform:translate(-50%,-50%);z-index:5;pointer-events:none}
+    .reticle::before,.reticle::after{content:'';position:absolute;background:rgba(226,243,255,.6)}
+    .reticle::before{left:50%;top:0;bottom:0;width:1.5px;margin-left:-.75px}
+    .reticle::after{top:50%;left:0;right:0;height:1.5px;margin-top:-.75px}
+    .m-clock{
+      position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:6;
+      background:rgba(2,6,23,.65);padding:.3rem .7rem;border-radius:7px;backdrop-filter:blur(4px);
+      font:600 .72rem/1.4 var(--font-mono);color:#dff3ff;text-shadow:0 1px 3px #000;
+    }
+    .flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:7;pointer-events:none}
+    .flash.go{animation:flash .55s ease-out}
+    @keyframes flash{0%{opacity:.5}100%{opacity:0}}
+
+    .monitor-stats{
+      display:flex;flex-wrap:wrap;justify-content:space-between;gap:.3rem 1.2rem;
+      padding:.8rem 1.1rem;border-top:1px solid rgba(148,163,184,.14);
+      font:600 .68rem/1.5 var(--font-mono);color:#8ea3c8;
+    }
+    .monitor-stats b{color:var(--accent);font-weight:700}
+    .monitor-stats .ok{color:var(--ok)}
+    .filmstrip{
+      display:flex;gap:5px;align-items:center;padding:.6rem .85rem;min-height:54px;
+      border-top:1px solid rgba(148,163,184,.12);overflow:hidden;
+    }
+    .thumb{
+      width:62px;height:37px;border-radius:6px;flex:0 0 auto;
+      border:1px solid rgba(255,255,255,.16);
+      animation:thumbIn .45s cubic-bezier(.2,.8,.3,1);
+    }
+    @keyframes thumbIn{from{transform:translateX(26px) scale(.65);opacity:0}}
+
+    .scroll-hint{
+      position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);
+      width:26px;height:44px;border:2px solid rgba(148,163,184,.35);border-radius:14px;
+    }
+    .scroll-hint::before{
+      content:'';position:absolute;top:8px;left:50%;width:4px;height:9px;border-radius:3px;
+      background:var(--accent);transform:translateX(-50%);animation:hint 2s infinite;
+    }
+    @keyframes hint{50%{transform:translateX(-50%) translateY(12px);opacity:.25}}
+
+    /* ============================================================
+       ۶) مارکی فناوری‌ها
+    ============================================================ */
+    .marquee{
+      overflow:hidden;direction:ltr;padding:1.4rem 0;border-block:1px solid var(--border);
+      background:rgba(10,15,30,.5);
+      -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+              mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+    }
+    .marquee-track{display:flex;width:max-content;animation:marquee 30s linear infinite}
+    .marquee:hover .marquee-track{animation-play-state:paused}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+    .mq-group{display:flex;align-items:center;gap:2.6rem;padding-right:2.6rem}
+    .mq-item{display:inline-flex;align-items:center;gap:.6rem;white-space:nowrap;font:700 .95rem var(--font-mono);color:var(--muted-2);letter-spacing:.06em}
+    .mq-item i{width:7px;height:7px;border-radius:50%;background:var(--primary);opacity:.7}
+
+    /* ============================================================
+       ۷) بخش‌ها — عنوان و آمار
+    ============================================================ */
+    section{padding:6rem 0;position:relative}
+    .eyebrow{
+      display:inline-block;padding:.35rem 1rem;border-radius:99px;margin-bottom:1rem;
+      background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.3);
+      color:var(--primary-2);font-size:.8rem;font-weight:700;letter-spacing:.02em;
+    }
+    .sec-title{text-align:center;max-width:44rem;margin:0 auto 3.5rem}
+    .sec-title h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;margin-bottom:.8rem}
+    .sec-title p{color:var(--muted);font-size:1.05rem}
+
+    .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+    .stat{
+      text-align:center;padding:2rem 1rem;border-radius:var(--r-md);
+      background:var(--surface);border:1px solid var(--border);backdrop-filter:blur(12px);
+      transition:border-color .3s,transform .3s;
+    }
+    .stat:hover{border-color:var(--border-hi);transform:translateY(-5px)}
+    .stat-num{
+      display:block;font:900 clamp(1.9rem,3.5vw,2.7rem)/1.2 Vazirmatn;
+      background:var(--grad-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    }
+    .stat-label{color:var(--muted);font-size:.9rem;font-weight:500}
+
+    /* ============================================================
+       ۸) امکانات — گرید بنتو
+    ============================================================ */
+    .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1.4rem}
+    .card{
+      grid-column:span 2;position:relative;overflow:hidden;
+      padding:1.9rem;border-radius:var(--r-lg);
+      background:var(--surface);border:1px solid var(--border);backdrop-filter:blur(12px);
+      transition:border-color .3s,box-shadow .3s;transform-style:preserve-3d;
+    }
+    .card.span-4{grid-column:span 4}
+    .card:hover{border-color:var(--border-hi);box-shadow:0 24px 60px -24px rgba(99,102,241,.45)}
+    .card-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.1rem}
+    .icon-box{
+      width:48px;height:48px;border-radius:14px;display:grid;place-items:center;flex:0 0 auto;
+      color:var(--c,var(--primary-2));background:color-mix(in srgb,var(--c,var(--primary-2)) 12%,transparent);
+      border:1px solid color-mix(in srgb,var(--c,var(--primary-2)) 30%,transparent);
+    }
+    .icon-box svg{width:23px;height:23px}
+    .card h3{font-size:1.1rem;font-weight:800}
+    .card p{color:var(--muted);font-size:.94rem}
+    .tilt::after{
+      content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+      background:radial-gradient(480px circle at var(--gx,50%) var(--gy,50%),rgba(129,140,248,.13),transparent 45%);
+      opacity:0;transition:opacity .35s;
+    }
+    .tilt:hover::after{opacity:1}
+
+    /* ویجت‌های زنده داخل کارت‌ها */
+    .net-map{display:grid;grid-template-columns:repeat(10,1fr);gap:7px;margin-top:1.4rem;direction:ltr}
+    .net-map i{aspect-ratio:1;border-radius:5px;background:rgba(148,163,184,.14);transition:.4s}
+    .net-map i.on{
+      background:var(--accent);box-shadow:0 0 14px rgba(34,211,238,.7);
+      animation:pop .5s cubic-bezier(.2,1.6,.4,1);
+    }
+    @keyframes pop{50%{transform:scale(1.7)}}
+    .net-status{
+      margin-top:1rem;color:var(--muted-2);font-size:.85rem;
+      opacity:0;transform:translateY(6px);transition:.6s;
+    }
+    .net-status.show{opacity:1;transform:none}
+    .net-status b{color:var(--ok)}
+
+    .modes-viz{display:flex;flex-direction:column;gap:.6rem;margin-top:1.3rem;direction:ltr}
+    .modes-viz code{
+      font:600 .78rem/1 var(--font-mono);color:#8ea3c8;background:rgba(2,6,23,.5);
+      border:1px solid var(--border);border-radius:8px;padding:.55rem .8rem;display:flex;gap:.5rem;align-items:center;
+    }
+    .modes-viz code b{color:var(--accent)}
+    .modes-viz .hp{
+      display:inline-block;min-width:30px;text-align:center;padding:.15rem .2rem;border-radius:6px;
+      background:rgba(99,102,241,.25);color:#c7d2fe;font-size:.72rem;
+    }
+
+    .tree{
+      direction:ltr;margin-top:1.3rem;background:rgba(2,6,23,.55);border:1px solid var(--border);
+      border-radius:12px;padding:1rem 1.2rem;font:600 .78rem/1.9 var(--font-mono);color:#8ea3c8;overflow:auto;
+    }
+    html.js .tree code{display:block;opacity:0;animation:lineIn .5s forwards}
+    html.js .tree code:nth-child(1){animation-delay:.9s}
+    html.js .tree code:nth-child(2){animation-delay:1.1s}
+    html.js .tree code:nth-child(3){animation-delay:1.3s}
+    html.js .tree code:nth-child(4){animation-delay:1.5s}
+    html.js .tree code:nth-child(5){animation-delay:1.7s}
+    html.js .tree code:nth-child(6){animation-delay:1.9s}
+    @keyframes lineIn{to{opacity:1}}
+    .tree .hl{color:var(--accent)}
+
+    .res-viz{display:flex;flex-direction:column;gap:.8rem;margin-top:1.3rem;direction:ltr}
+    .res-row{display:flex;align-items:center;gap:.7rem;font:600 .68rem/1 var(--font-mono);color:#8ea3c8}
+    .res-row span{width:42px}
+    .res-row b{width:58px;color:var(--accent);font-weight:700}
+    .res-bar{flex:1;height:8px;border-radius:99px;background:rgba(148,163,184,.14);overflow:hidden}
+    .res-bar i{
+      display:block;height:100%;width:var(--w);border-radius:inherit;
+      background:linear-gradient(90deg,var(--accent),var(--primary));
+      animation:bar 3.4s ease-in-out infinite alternate;
+    }
+    @keyframes bar{to{width:calc(var(--w) + 9%)}}
+
+    /* ============================================================
+       ۹) اسکرین‌شات‌ها + لایت‌باکس
+    ============================================================ */
+    .shots-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+    .shot{
+      position:relative;border-radius:var(--r-lg);overflow:hidden;cursor:pointer;
+      background:var(--surface);border:1px solid var(--border);
+      transition:transform .35s,border-color .35s,box-shadow .35s;
+    }
+    .shot:hover,.shot:focus-visible{transform:translateY(-8px);border-color:var(--border-hi);box-shadow:0 26px 60px -22px rgba(99,102,241,.5)}
+    .shot-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(140deg,var(--bg-2),var(--bg-0))}
+    .shot-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.3,1)}
+    .shot:hover .shot-media img{transform:scale(1.07)}
+    .shot-tag{
+      position:absolute;top:1rem;right:1rem;z-index:2;padding:.3rem .8rem;border-radius:99px;
+      background:rgba(6,9,18,.75);backdrop-filter:blur(8px);border:1px solid rgba(148,163,184,.25);
+      color:var(--accent);font:700 .72rem/1.5 var(--font-mono);letter-spacing:.05em;
+    }
+    .shot-fallback{
+      position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;
+      color:var(--muted-2);padding:1.5rem;text-align:center;
+    }
+    .shot-fallback svg{width:44px;height:44px;stroke:var(--muted-2);opacity:.6}
+    .shot-fallback p{font-weight:700;color:var(--muted)}
+    .shot-fallback small{font-size:.75rem}
+    .shot-fallback code{font-family:var(--font-mono);color:var(--accent);direction:ltr}
+    .shot-zoom{
+      position:absolute;bottom:1rem;left:1rem;z-index:2;width:40px;height:40px;border-radius:12px;
+      display:grid;place-items:center;background:rgba(99,102,241,.85);color:#fff;
+      opacity:0;transform:translateY(8px);transition:.3s;
+    }
+    .shot-zoom svg{width:18px;height:18px}
+    .shot:hover .shot-zoom{opacity:1;transform:none}
+    .shot figcaption{padding:1.1rem 1.3rem}
+    .shot figcaption h3{font-size:1.02rem;font-weight:800;margin-bottom:.25rem}
+    .shot figcaption p{color:var(--muted);font-size:.86rem}
+
+    .lightbox{
+      position:fixed;inset:0;z-index:2000;display:grid;place-items:center;padding:2rem;
+      background:rgba(3,5,11,.92);backdrop-filter:blur(10px);
+      opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;
+    }
+    .lightbox.open{opacity:1;visibility:visible}
+    .lb-figure{max-width:min(1080px,92vw);width:100%;text-align:center}
+    .lb-figure img,.lb-placeholder{
+      max-height:76vh;width:auto;max-width:100%;margin-inline:auto;border-radius:16px;
+      border:1px solid rgba(148,163,184,.25);box-shadow:0 30px 80px rgba(0,0,0,.6);
+    }
+    .lb-placeholder{
+      display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;
+      aspect-ratio:16/10;color:var(--muted);padding:2rem;background:var(--bg-2);
+    }
+    .lb-placeholder svg{width:56px;height:56px;stroke:var(--muted-2)}
+    #lbCaption{margin-top:1rem;color:var(--muted);font-size:1rem}
+    #lbCounter{color:var(--primary-2);font-weight:700;font-size:.9rem}
+    .lb-btn{
+      position:absolute;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+      background:rgba(255,255,255,.08);border:1px solid rgba(148,163,184,.3);color:#fff;
+      cursor:pointer;transition:background .25s,transform .25s;
+    }
+    .lb-btn:hover{background:rgba(99,102,241,.5);transform:scale(1.08)}
+    .lb-btn svg{width:22px;height:22px}
+    .lb-close{top:2rem;left:2rem}
+    .lb-prev{top:50%;right:1.5rem;transform:translateY(-50%)}
+    .lb-next{top:50%;left:1.5rem;transform:translateY(-50%)}
+    .lb-prev:hover{transform:translateY(-50%) scale(1.08)}
+    .lb-next:hover{transform:translateY(-50%) scale(1.08)}
+
+    /* ============================================================
+       ۱۰) نحوه کار
+    ============================================================ */
+    .steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;padding-top:1rem}
+    .steps::before{
+      content:'';position:absolute;top:3.4rem;right:12%;left:12%;height:2.5px;border-radius:3px;
+      background:linear-gradient(-90deg,var(--primary),var(--accent));
+      transform:scaleX(0);transform-origin:right;transition:transform 1.4s cubic-bezier(.2,.7,.3,1) .2s;
+    }
+    .steps.in::before{transform:scaleX(1)}
+    .step{text-align:center;position:relative}
+    .step-num{
+      width:72px;height:72px;margin:0 auto 1.2rem;display:grid;place-items:center;
+      border-radius:50%;background:var(--grad-1);font-size:1.6rem;font-weight:900;color:#fff;
+      box-shadow:0 14px 34px rgba(99,102,241,.45);position:relative;z-index:1;
+    }
+    .step h3{font-size:1.08rem;font-weight:800;margin-bottom:.5rem}
+    .step p{color:var(--muted);font-size:.9rem}
+
+    /* ============================================================
+       ۱۱) سوالات متداول
+    ============================================================ */
+    .faq{max-width:46rem;margin-inline:auto;display:flex;flex-direction:column;gap:1rem}
+    .faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;transition:border-color .3s}
+    .faq-item.open{border-color:var(--border-hi)}
+    .faq-q{
+      width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+      padding:1.15rem 1.4rem;background:none;border:none;cursor:pointer;
+      font:inherit;font-size:1rem;font-weight:700;color:var(--text);text-align:right;
+    }
+    .faq-q .chev{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(99,102,241,.14);color:var(--primary-2);transition:transform .35s,background .3s}
+    .faq-q .chev svg{width:15px;height:15px}
+    .faq-item.open .chev{transform:rotate(180deg);background:var(--primary);color:#fff}
+    .faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s cubic-bezier(.2,.8,.3,1)}
+    .faq-item.open .faq-a{grid-template-rows:1fr}
+    .faq-a>div{overflow:hidden}
+    .faq-a p{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.94rem}
+
+    /* ============================================================
+       ۱۲) دانلود
+    ============================================================ */
+    .dl-section{padding-bottom:7rem}
+    .dl-card{
+      position:relative;max-width:820px;margin-inline:auto;text-align:center;
+      padding:4rem 2rem;border-radius:26px;background:linear-gradient(170deg,rgba(30,41,69,.75),rgba(10,15,30,.85));
+      backdrop-filter:blur(16px);
+    }
+    .dl-card::before{
+      content:'';position:absolute;inset:-1.5px;border-radius:inherit;padding:1.5px;pointer-events:none;
+      background:conic-gradient(from var(--a,0deg),transparent 0 68%,var(--primary) 82%,var(--accent) 90%,transparent 96%);
+      -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+      -webkit-mask-composite:xor;mask-composite:exclude;
+      animation:ring 7s linear infinite;
+    }
+    @property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+    @keyframes ring{to{--a:360deg}}
+    .dl-icon{
+      width:84px;height:84px;margin:0 auto 1.6rem;border-radius:24px;display:grid;place-items:center;
+      background:var(--grad-1);box-shadow:0 20px 50px rgba(99,102,241,.5);
+    }
+    .dl-icon svg{width:40px;height:40px;fill:#e6eaf2}
+    .dl-card h2{font-size:clamp(1.5rem,2.8vw,2.1rem);font-weight:900;margin-bottom:.8rem}
+    .dl-card>p{color:var(--muted);max-width:32rem;margin:0 auto 2.2rem}
+    .dl-specs{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2rem}
+    .dl-specs span{
+      padding:.5rem 1.1rem;border-radius:99px;font-size:.82rem;color:var(--muted);
+      background:rgba(148,163,184,.08);border:1px solid var(--border);
+    }
+    .dl-alt{margin-top:1.6rem;color:var(--muted-2);font-size:.9rem}
+    .dl-alt a{color:var(--accent);font-weight:700}
+    .dl-alt a:hover{text-decoration:underline}
+
+    /* ============================================================
+       ۱۳) فوتر
+    ============================================================ */
+    footer{
+      padding:4.5rem 0 2rem;background:linear-gradient(to top,rgba(15,23,42,.9),transparent);
+      border-top:1px solid var(--border);
+    }
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+    .footer-brand p{color:var(--muted);font-size:.92rem;margin:1rem 0 1.4rem;max-width:26rem}
+    .footer-brand .logo{margin-bottom:.5rem}
+    .footer-col h3{font-size:1rem;font-weight:800;margin-bottom:1.2rem;color:var(--text)}
+    .footer-col a{display:block;color:var(--muted);font-size:.92rem;padding:.32rem 0;transition:color .25s,transform .25s}
+    .footer-col a:hover{color:var(--accent);transform:translateX(-4px)}
+    .footer-bottom{
+      padding-top:2rem;border-top:1px solid var(--border);text-align:center;
+      color:var(--muted-2);font-size:.88rem;
+    }
+    .footer-bottom a{color:var(--primary-2);font-weight:800}
+    .footer-bottom a:hover{color:var(--accent)}
+    .intell-badge{
+      display:inline-flex;align-items:center;gap:.55rem;padding:.6rem 1.3rem;border-radius:99px;
+      background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.35);
+      color:var(--primary-2);font-weight:700;font-size:.9rem;transition:.3s;
+    }
+    .intell-badge:hover{background:rgba(99,102,241,.25);transform:translateY(-2px)}
+    .intell-badge svg{width:17px;height:17px}
+
+    /* ============================================================
+       ۱۴) دکمه بازگشت به بالا + انیمیشن‌های اسکرول
+    ============================================================ */
+    #toTop{
+      position:fixed;bottom:1.6rem;left:1.6rem;z-index:900;width:48px;height:48px;border-radius:14px;
+      display:grid;place-items:center;cursor:pointer;border:1px solid var(--border);
+      background:rgba(17,24,42,.85);backdrop-filter:blur(10px);color:var(--text);
+      opacity:0;visibility:hidden;transform:translateY(14px);transition:.35s;
+    }
+    #toTop.show{opacity:1;visibility:visible;transform:none}
+    #toTop:hover{background:var(--primary);border-color:var(--primary)}
+    #toTop svg{width:20px;height:20px}
+
+    html.js [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+    html.js [data-reveal].in{opacity:1;transform:none}
+
+    /* ============================================================
+       ۱۵) واکنش‌گرایی
+    ============================================================ */
+    @media (max-width:1024px){
+      .hero-grid{grid-template-columns:1fr;gap:3.5rem}
+      .hero-sub{max-width:100%}
+      .bento{grid-template-columns:repeat(2,1fr)}
+      .card,.card.span-4{grid-column:span 2}
+      .steps{grid-template-columns:repeat(2,1fr);gap:2.5rem}
+      .steps::before{display:none}
+    }
+    @media (max-width:880px){
+      section{padding:4.5rem 0}
+      .stats-row{grid-template-columns:repeat(2,1fr)}
+      .shots-grid{grid-template-columns:1fr;max-width:480px;margin-inline:auto}
+      .footer-grid{grid-template-columns:1fr;gap:2.2rem}
+    }
+    @media (max-width:560px){
+      .bento{grid-template-columns:1fr}
+      .card,.card.span-4{grid-column:span 1}
+      .steps{grid-template-columns:1fr}
+      .hero-actions .btn{width:100%;justify-content:center}
+      .lb-prev{right:.6rem}.lb-next{left:.6rem}.lb-close{top:1rem;left:1rem}
+    }
+    @media (prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+      html{scroll-behavior:auto}
+    }
     </style>
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <div class="container">
+    <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+    <div id="progressBar" aria-hidden="true"></div>
+    <div id="cursorGlow" aria-hidden="true"></div>
+    <div id="particles" aria-hidden="true"></div>
 
-        <!-- ====== HEADER ====== -->
-        <header class="page-header">
-            <div class="brand">
-                <!-- simple logo icon -->
-                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
-                </svg>
-                <span>IntellSoft</span>
-            </div>
-            <button class="theme-toggle" id="themeToggle" aria-label="تغییر تم">
-                <svg viewBox="0 0 24 24" width="18" height="18">
-                    <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
-                </svg>
-                <span>تم</span>
+    <!-- ================= ناوبری ================= -->
+    <header class="nav" id="navbar">
+        <div class="nav-inner">
+            <a class="logo" href="#hero" aria-label="تایم‌لپس رکوردر — صفحه اصلی">
+                <span class="logo-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="4"/></svg>
+                </span>
+                <span>تایم‌لپس رکوردر<small>by IntellSoft</small></span>
+            </a>
+            <nav class="nav-links" aria-label="ناوبری اصلی">
+                <a class="nav-link" href="#features">امکانات</a>
+                <a class="nav-link" href="#screenshots">تصاویر</a>
+                <a class="nav-link" href="#how">نحوه کار</a>
+                <a class="nav-link" href="#faq">سوالات متداول</a>
+                <a class="nav-link" href="https://intellsoft.ir" target="_blank" rel="noopener">IntellSoft</a>
+                <a class="nav-cta" href="#download">دانلود رایگان</a>
+            </nav>
+            <button class="burger" id="menuBtn" aria-label="باز و بسته کردن منو" aria-expanded="false" aria-controls="mobileMenu">
+                <span></span><span></span><span></span>
             </button>
-        </header>
+        </div>
+    </header>
+    <nav id="mobileMenu" aria-label="منوی موبایل">
+        <a href="#features">امکانات</a>
+        <a href="#screenshots">تصاویر نرم‌افزار</a>
+        <a href="#how">نحوه کار</a>
+        <a href="#faq">سوالات متداول</a>
+        <a href="#download">دانلود رایگان</a>
+        <a href="https://intellsoft.ir" target="_blank" rel="noopener">سایت IntellSoft ↗</a>
+    </nav>
 
-        <!-- ====== HERO ====== -->
-        <section class="hero">
-            <div class="hero-text">
-                <div class="hero-badge">✨ جدیدترین نسخه</div>
-                <h1>ضبط‌کننده تایم‌لپس دوربین مداربسته</h1>
-                <div class="sub">Network Camera Recorder با قابلیت تایم‌لپس پیشرفته</div>
-                <p>
-                    با این نرم‌افزار حرفه‌ای، دوربین‌های تحت شبکه خود را به یک ابزار قدرتمند
-                    برای ثبت تایم‌لپس از پروژه‌های عمرانی، طبیعت و رویدادهای روزمره تبدیل کنید.
-                </p>
-                <a href="https://intellsoft.ir/product/timelapse-camera-recorder/" class="btn-primary" target="_blank" rel="noopener">
-                    مشاهده در سایت اصلی
-                </a>
+    <main id="main">
+        <!-- ================= هیرو ================= -->
+        <section class="hero" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <span class="hero-badge"><i></i> نسخه ۱.۰ برای ویندوز — کاملاً رایگان</span>
+                    <h1>هر لحظه‌ی پروژه‌تان را<br>با <span class="grad">تایم‌لپس هوشمند</span> ثبت کنید</h1>
+                    <p class="hero-sub">
+                        <b>تایم‌لپس رکوردر</b> تصاویر دوربین‌های تحت شبکه‌تان را به‌صورت خودکار و در بازه‌های زمانی دلخواه ضبط می‌کند؛
+                        با <b>کشف خودکار دوربین (ONVIF)</b>، ضبط همزمان چند دوربین و خروجی آماده‌ی ساخت ویدیو — همه در یک ابزار سبک و پرتابل.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn btn-primary magnetic">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>
+                            دانلود رایگان نسخه ویندوز
+                        </a>
+                        <a href="#features" class="btn btn-ghost magnetic">مشاهده امکانات</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg> بدون نیاز به اینترنت</span>
+                        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg> نسخه پرتابل، بدون نصب</span>
+                        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg> رایگان و بدون محدودیت</span>
+                    </div>
+                </div>
+
+                <!-- شبیه‌سازی زنده‌ی ضبط — واکنش‌گرا به حرکت موس -->
+                <div class="hero-visual" data-reveal data-delay="150">
+                    <div class="monitor-float">
+                        <div class="monitor" id="monitor" role="img" aria-label="شبیه‌سازی محیط ضبط نرم‌افزار تایم‌لپس رکوردر">
+                            <div class="monitor-head">
+                                <span class="m-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                                <span class="m-title">Timelapse Recorder — CAM 01</span>
+                                <span class="rec"><i></i>REC</span>
+                            </div>
+                            <div class="view">
+                                <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+                                <div class="scanline" aria-hidden="true"></div>
+                                <span class="corner c1"></span><span class="corner c2"></span>
+                                <span class="corner c3"></span><span class="corner c4"></span>
+                                <div class="reticle" aria-hidden="true"></div>
+                                <span class="m-clock" id="liveClock" dir="rtl">—</span>
+                                <div class="flash" id="captureFlash"></div>
+                            </div>
+                            <div class="monitor-stats">
+                                <span><b>IP</b> 192.168.1.108</span>
+                                <span><b>MODE</b> INTERVAL 300s</span>
+                                <span><b>FRAMES</b> <span class="ok" id="frameCount">۱٬۲۴۰</span></span>
+                                <span><b>DISK</b> <span class="ok">OK ✓</span></span>
+                            </div>
+                            <div class="filmstrip" id="filmstrip" aria-hidden="true"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="hero-visual">
-                <!-- camera / timelapse illustration (inline SVG) -->
-                <svg width="200" height="140" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="10" y="30" width="180" height="100" rx="16" stroke="var(--text-secondary)" stroke-width="2.5" fill="var(--bg-card)" />
-                    <circle cx="100" cy="80" r="28" stroke="var(--accent)" stroke-width="2.5" fill="var(--accent-light)" />
-                    <circle cx="100" cy="80" r="12" fill="var(--accent)" />
-                    <rect x="40" y="20" width="120" height="16" rx="8" fill="var(--bg-header)" />
-                    <circle cx="62" cy="28" r="5" fill="#facc15" />
-                    <circle cx="78" cy="28" r="5" fill="#22c55e" />
-                    <circle cx="94" cy="28" r="5" fill="#ef4444" />
-                    <path d="M30 130 L170 130" stroke="var(--border-light)" stroke-width="2" stroke-dasharray="6 6" />
-                    <text x="100" y="150" font-size="10" fill="var(--text-muted)" text-anchor="middle" font-family="Segoe UI, sans-serif">Timelapse Recorder</text>
-                </svg>
+            <div class="scroll-hint" aria-hidden="true"></div>
+        </section>
+
+        <!-- ================= مارکی فناوری ================= -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track" id="marqueeTrack">
+                <div class="mq-group">
+                    <span class="mq-item"><i></i>ONVIF</span><span class="mq-item"><i></i>RTSP</span>
+                    <span class="mq-item"><i></i>FFMPEG</span><span class="mq-item"><i></i>MULTI-THREADING</span>
+                    <span class="mq-item"><i></i>PYTHON</span><span class="mq-item"><i></i>WINDOWS 10 / 11</span>
+                    <span class="mq-item"><i></i>XOR ENCRYPTION</span><span class="mq-item"><i></i>PORTABLE</span>
+                    <span class="mq-item"><i></i>JSON CONFIG</span><span class="mq-item"><i></i>24/7 STABLE</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= آمار ================= -->
+        <section id="stats" aria-label="آمار نرم‌افزار">
+            <div class="container stats-row">
+                <div class="stat" data-reveal><span class="stat-num" data-target="2">۲</span><span class="stat-label">حالت ضبط انعطاف‌پذیر</span></div>
+                <div class="stat" data-reveal data-delay="80"><span class="stat-num" data-target="24" data-suffix=" / ۷">۲۴ / ۷</span><span class="stat-label">عملکرد پیوسته و پایدار</span></div>
+                <div class="stat" data-reveal data-delay="160"><span class="stat-num" data-target="254">۲۵۴</span><span class="stat-label">آدرس IP در هر شبکه اسکن می‌شود</span></div>
+                <div class="stat" data-reveal data-delay="240"><span class="stat-num" data-target="100" data-suffix="٪">۱۰۰٪</span><span class="stat-label">رایگان، بدون محدودیت</span></div>
             </div>
         </section>
 
-        <!-- ====== FEATURES ====== -->
-        <h2 class="section-title">⚡ ویژگی‌های کلیدی</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <span class="icon">📹</span>
-                <h3>اتصال به دوربین‌های تحت شبکه</h3>
-                <p>پشتیبانی از اکثر دوربین‌های IP و آنالوگ جهت ضبط تایم‌لپس بدون دردسر.</p>
+        <!-- ================= امکانات ================= -->
+        <section id="features">
+            <div class="container">
+                <div class="sec-title" data-reveal>
+                    <span class="eyebrow">امکانات</span>
+                    <h2>هر آنچه برای <span class="grad">نظارت تصویری حرفه‌ای</span> نیاز دارید</h2>
+                    <p>همه‌ی این قابلیت‌ها دقیقاً همان چیزی است که در قلب نرم‌افزار پیاده‌سازی شده است</p>
+                </div>
+                <div class="bento">
+                    <article class="card span-4 tilt" data-reveal style="--c:#22d3ee">
+                        <div class="card-head">
+                            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.2-4.2"/></svg></span>
+                            <h3>کشف خودکار دوربین با ONVIF</h3>
+                        </div>
+                        <p>نرم‌افزار شبکه‌ی شما را به‌صورت موازی و هوشمند اسکن می‌کند و دوربین‌های IP را پیدا می‌کند؛ نام کاربری و رمز را وارد کنید تا آدرس RTSP به‌صورت خودکار شناسایی شود. حتی بدون ONVIF، پورت ۵۵۴ نیز بررسی می‌شود.</p>
+                        <div class="net-map" id="netMap" aria-hidden="true"></div>
+                        <p class="net-status" id="netStatus"><b>۶ دوربین</b> در شبکه شناسایی شد — کافی است روی «افزودن» کلیک کنید <b>✓</b></p>
+                    </article>
+
+                    <article class="card tilt" data-reveal data-delay="100" style="--c:#a78bfa">
+                        <div class="card-head">
+                            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                            <h3>دو حالت ضبط انعطاف‌پذیر</h3>
+                        </div>
+                        <p>عکس‌برداری در بازه‌ی زمانی دلخواه یا فقط در ساعات مشخصی از شبانه‌روز — برای هر دوربین جداگانه قابل تنظیم است.</p>
+                        <div class="modes-viz" aria-hidden="true">
+                            <code><b>INTERVAL</b> every 300 seconds</code>
+                            <code><b>HOURS</b> <span class="hp">08</span><span class="hp">09</span><span class="hp">10</span><span class="hp">17</span></code>
+                        </div>
+                    </article>
+
+                    <article class="card tilt" data-reveal style="--c:#818cf8">
+                        <div class="card-head">
+                            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="13" height="10" rx="2.5"/><path d="M15 11.5 22 8v8l-7-3.5"/></svg></span>
+                            <h3>ضبط همزمان چند دوربین</h3>
+                        </div>
+                        <p>هر دوربین در یک نخ (Thread) مستقل و پایدار اجرا می‌شود؛ بدون محدودیت در تعداد دوربین‌ها و با نظارت خودکار بر سلامت نخ‌ها.</p>
+                    </article>
+
+                    <article class="card tilt" data-reveal data-delay="80" style="--c:#34d399">
+                        <div class="card-head">
+                            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 3h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
+                            <h3>ساختار هوشمند ذخیره‌سازی</h3>
+                        </div>
+                        <p>تصاویر به‌صورت خودکار بر اساس IP و تاریخ دسته‌بندی می‌شوند تا پیدا کردن هر لحظه، فقط چند ثانیه طول بکشد.</p>
+                        <pre class="tree" aria-hidden="true"><code>output/</code><code>├─ <span class="hl">192.168.1.108</span>/</code><code>│   └─ 2025/07/21/</code><code>│       ├─ 08-00-00.jpg</code><code>│       └─ 08-05-00.jpg</code><code>└─ <span class="hl">192.168.1.112</span>/ ...</code></pre>
+                    </article>
+
+                    <article class="card tilt" data-reveal data-delay="160" style="--c:#f43f5e">
+                        <div class="card-head">
+                            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.5 8-8 9-4.5-1-8-4.5-8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+                            <h3>امنیت اطلاعات ورود</h3>
+                        </div>
+                        <p>اعتبارنامه‌های RTSP هرگز به‌صورت خام ذخیره نمی‌شوند؛ با رمزنگاری در فایل پیکربندی نگهداری می‌شوند و از بکاپ خودکار نیز پشتیبانی می‌شود.</p>
+                    </article>
+
+                    <article class="card tilt" data-reveal style="--c:#fbbf24">
+                        <div class="card-head">
+                            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></span>
+                            <h3>مانیتورینگ منابع سیستم</h3>
+                        </div>
+                        <p>پایش مداوم حافظه، فضای دیسک و سلامت نخ‌ها؛ هشدار خودکار در کمبود فضا برای کارکرد ۲۴/۷ بدون دغدغه.</p>
+                        <div class="res-viz" aria-hidden="true">
+                            <div class="res-row"><span>RAM</span><div class="res-bar"><i style="--w:36%"></i></div><b>312MB</b></div>
+                            <div class="res-row"><span>DISK</span><div class="res-bar"><i style="--w:22%"></i></div><b>OK</b></div>
+                            <div class="res-row"><span>THREAD</span><div class="res-bar"><i style="--w:58%"></i></div><b>6 live</b></div>
+                        </div>
+                    </article>
+
+                    <article class="card tilt" data-reveal data-delay="80" style="--c:#38bdf8">
+                        <div class="card-head">
+                            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="m7 9 3 3-3 3M13 15h4"/></svg></span>
+                            <h3>گزارش‌گیری حرفه‌ای (لاگ)</h3>
+                        </div>
+                        <p>تمام رویدادها با سطح‌بندی رنگی ثبت می‌شوند؛ چرخش خودکار فایل لاگ، نمایش زنده در محیط برنامه و ذخیره در فایل.</p>
+                    </article>
+
+                    <article class="card tilt" data-reveal data-delay="160" style="--c:#c084fc">
+                        <div class="card-head">
+                            <span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg></span>
+                            <h3>آماده‌ی ساخت ویدیو</h3>
+                        </div>
+                        <p>تصاویر با کیفیت اصلی ذخیره می‌شوند و به‌راحتی با FFmpeg به ویدیوی تایم‌لپس تبدیل می‌شوند؛ گالری داخلی برای مرور تصاویر و اسلایدشو با سرعت دلخواه.</p>
+                    </article>
+                </div>
             </div>
-            <div class="feature-card">
-                <span class="icon">⏱️</span>
-                <h3>تنظیم بازه‌های زمانی دلخواه</h3>
-                <p>فواصل ثبت تصویر را از چند ثانیه تا چند ساعت تنظیم کنید.</p>
+        </section>
+
+        <!-- ================= اسکرین‌شات‌ها ================= -->
+        <section id="screenshots" style="background:rgba(10,15,30,.45);border-block:1px solid var(--border)">
+            <div class="container">
+                <div class="sec-title" data-reveal>
+                    <span class="eyebrow">گالری</span>
+                    <h2>نگاهی به <span class="grad">محیط نرم‌افزار</span></h2>
+                    <p>روی هر تصویر کلیک کنید تا در حالت بزرگ نمایش داده شود</p>
+                </div>
+                <div class="shots-grid">
+                    <!-- ⚠️ تصاویر واقعی خود را با همین نام‌ها در پوشه images قرار دهید -->
+                    <figure class="shot" data-reveal tabindex="0" role="button" aria-label="نمایش بزرگ: پنل مدیریت دوربین‌ها">
+                        <div class="shot-media">
+                            <span class="shot-tag">CONFIG TAB</span>
+                            <img src="images/screenshot-1.jpg" alt="پنل مدیریت و پیکربندی دوربین‌ها در نرم‌افزار تایم‌لپس رکوردر" loading="lazy" decoding="async" width="1280" height="800">
+                            <div class="shot-fallback" hidden>
+                                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="4"/></svg>
+                                <p>تصویر ۱ — پنل مدیریت دوربین‌ها</p>
+                                <small>فایل را در مسیر <code>images/screenshot-1.jpg</code> قرار دهید</small>
+                            </div>
+                            <span class="shot-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.2-4.2M11 8v6M8 11h6"/></svg></span>
+                        </div>
+                        <figcaption><h3>پنل مدیریت دوربین‌ها</h3><p>افزودن، ویرایش و پیکربندی دوربین‌ها با فرم و فهرست یکپارچه</p></figcaption>
+                    </figure>
+
+                    <figure class="shot" data-reveal data-delay="120" tabindex="0" role="button" aria-label="نمایش بزرگ: گالری تصاویر ضبط‌شده">
+                        <div class="shot-media">
+                            <span class="shot-tag">GALLERY</span>
+                            <img src="images/screenshot-2.jpg" alt="گالری نمایش تصاویر ضبط‌شده به‌صورت شبکه‌ای در نرم‌افزار تایم‌لپس رکوردر" loading="lazy" decoding="async" width="1280" height="800">
+                            <div class="shot-fallback" hidden>
+                                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="4"/></svg>
+                                <p>تصویر ۲ — گالری تصاویر ضبط‌شده</p>
+                                <small>فایل را در مسیر <code>images/screenshot-2.jpg</code> قرار دهید</small>
+                            </div>
+                            <span class="shot-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.2-4.2M11 8v6M8 11h6"/></svg></span>
+                        </div>
+                        <figcaption><h3>گالری تصاویر</h3><p>مشاهده‌ی عکس‌های ضبط‌شده در حالت شبکه‌ای همراه اسلایدشو</p></figcaption>
+                    </figure>
+
+                    <figure class="shot" data-reveal data-delay="240" tabindex="0" role="button" aria-label="نمایش بزرگ: پنجره جستجوی دوربین">
+                        <div class="shot-media">
+                            <span class="shot-tag">ONVIF SCAN</span>
+                            <img src="images/screenshot-3.jpg" alt="پنجره جستجو و کشف خودکار دوربین‌های ONVIF در نرم‌افزار تایم‌لپس رکوردر" loading="lazy" decoding="async" width="1280" height="800">
+                            <div class="shot-fallback" hidden>
+                                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="4"/></svg>
+                                <p>تصویر ۳ — پنجره جستجوی دوربین</p>
+                                <small>فایل را در مسیر <code>images/screenshot-3.jpg</code> قرار دهید</small>
+                            </div>
+                            <span class="shot-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.2-4.2M11 8v6M8 11h6"/></svg></span>
+                        </div>
+                        <figcaption><h3>جستجوی دوربین</h3><p>کشف خودکار دوربین‌های شبکه با ONVIF و اسکن IP</p></figcaption>
+                    </figure>
+                </div>
             </div>
-            <div class="feature-card">
-                <span class="icon">💾</span>
-                <h3>ذخیره‌سازی بهینه</h3>
-                <p>کاهش حجم ذخیره‌سازی با ضبط تنها لحظات کلیدی و حرکت‌ها.</p>
+        </section>
+
+        <!-- ================= نحوه کار ================= -->
+        <section id="how">
+            <div class="container">
+                <div class="sec-title" data-reveal>
+                    <span class="eyebrow">مراحل</span>
+                    <h2>در <span class="grad">۴ قدم ساده</span> شروع کنید</h2>
+                    <p>از دانلود تا ضبط خودکار، کمتر از پنج دقیقه</p>
+                </div>
+                <ol class="steps" data-reveal>
+                    <li class="step">
+                        <span class="step-num">۱</span>
+                        <h3>دانلود و اجرا</h3>
+                        <p>فایل اجرایی را دانلود و مستقیم اجرا کنید؛ بدون نصب و بدون پیش‌نیاز پیچیده.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-num">۲</span>
+                        <h3>کشف دوربین‌ها</h3>
+                        <p>با یک کلیک، شبکه را اسکن کنید و دوربین‌های موجود را به فهرست اضافه کنید.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-num">۳</span>
+                        <h3>تنظیم برنامه ضبط</h3>
+                        <p>بازه‌ی زمانی یا ساعات مشخص روز را برای هر دوربین تعیین کنید.</p>
+                    </li>
+                    <li class="step">
+                        <span class="step-num">۴</span>
+                        <h3>ضبط خودکار</h3>
+                        <p>از این پس همه‌چیز خودکار است؛ تصاویر مرتب ذخیره و برای ویدیو آماده می‌شوند.</p>
+                    </li>
+                </ol>
             </div>
-            <div class="feature-card">
-                <span class="icon">🎛️</span>
-                <h3>رابط کاربری ساده و حرفه‌ای</h3>
-                <p>مدیریت آسان تنظیمات تایم‌لپس، نرخ فریم و رزولوشن خروجی.</p>
+        </section>
+
+        <!-- ================= سوالات متداول ================= -->
+        <section id="faq">
+            <div class="container">
+                <div class="sec-title" data-reveal>
+                    <span class="eyebrow">پرسش‌ها</span>
+                    <h2>سوالات <span class="grad">متداول</span></h2>
+                </div>
+                <div class="faq" data-reveal>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">آیا نرم‌افزار رایگان است؟<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></span></button>
+                        <div class="faq-a"><div><p>بله؛ نسخه‌ی فعلی کاملاً رایگان و بدون هیچ محدودیتی در تعداد دوربین یا مدت زمان ضبط است.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">چه دوربین‌هایی پشتیبانی می‌شوند؟<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></span></button>
+                        <div class="faq-a"><div><p>هر دوربین تحت شبکه‌ای که پروتکل RTSP یا ONVIF را پشتیبانی کند — یعنی تقریباً اکثر برندهای رایج بازار. حتی اگر ONVIF نداشته باشد، پورت ۵۵۴ بررسی می‌شود.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">آیا برای استفاده به اینترنت نیاز است؟<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></span></button>
+                        <div class="faq-a"><div><p>خیر؛ نرم‌افزار فقط با شبکه‌ی محلی کار می‌کند و هیچ داده‌ای به بیرون ارسال نمی‌شود.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">اطلاعات ورود دوربین من چگونه حفظ می‌شود؟<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></span></button>
+                        <div class="faq-a"><div><p>اعتبارنامه‌های RTSP به‌صورت رمزنگاری‌شده در فایل پیکربندی ذخیره می‌شوند و هرگز به‌صورت متن خام نوشته نمی‌شوند. از فایل پیکربندی نیز به‌طور خودکار بکاپ گرفته می‌شود.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">چند دوربین می‌توانم همزمان داشته باشم؟<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></span></button>
+                        <div class="faq-a"><div><p>محدودیتی وجود ندارد؛ هر دوربین در یک نخ مستقل اجرا می‌شود و سلامت نخ‌ها به‌صورت خودکار پایش می‌شود.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" aria-expanded="false">خروجی نهایی چیست؟<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></span></button>
+                        <div class="faq-a"><div><p>تصاویر JPG با کیفیت اصلی، در ساختار پوشه‌ی IP/سال/ماه/روز ذخیره می‌شوند و به‌راحتی با FFmpeg به ویدیوی تایم‌لپس تبدیل می‌شوند. گالری داخلی نرم‌افزار نیز برای مرور و اسلایدشو در دسترس است.</p></div></div>
+                    </div>
+                </div>
             </div>
-            <div class="feature-card">
-                <span class="icon">🧠</span>
-                <h3>تشخیص حرکت هوشمند</h3>
-                <p>الگوریتم‌های پیشرفته برای شناسایی خودکار رویدادهای مهم.</p>
+        </section>
+
+        <!-- ================= دانلود ================= -->
+        <section id="download" class="dl-section">
+            <div class="container">
+                <div class="dl-card" data-reveal>
+                    <div class="dl-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M3 5.6l8.2-1.1v7.9H3zM12.6 4.4L21 3.3v9.1h-8.4zM3 13.6h8.2v7.9L3 20.4zM12.6 13.6H21v9.1l-8.4-1.1z"/></svg>
+                    </div>
+                    <h2>آماده‌ی شروع هستید؟</h2>
+                    <p>همین حالا تایم‌لپس رکوردر را دانلود کنید و اولین تایم‌لپس پروژه‌تان را بسازید.</p>
+                    <!-- ⚠️ لینک دانلود واقعی فایل را جایگزین کنید -->
+                    <a href="downloads/TimelapseRecorder.zip" class="btn btn-primary magnetic">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>
+                        دانلود نسخه ویندوز
+                    </a>
+                    <div class="dl-specs">
+                        <span>ویندوز ۷ / ۸ / ۱۰ / ۱۱</span>
+                        <span>نسخه پرتابل — بدون نصب</span>
+                        <span>حجم کم</span>
+                        <span>نسخه ۱.۰.۰</span>
+                    </div>
+                    <p class="dl-alt">برای معرفی کامل و پشتیبانی، <a href="https://intellsoft.ir" target="_blank" rel="noopener">سایت IntellSoft</a> را ببینید.</p>
+                </div>
             </div>
-            <div class="feature-card">
-                <span class="icon">🔄</span>
-                <h3>سازگاری با چند دوربین</h3>
-                <p>امکان اتصال همزمان چند دوربین و ساخت تایم‌لپس ترکیبی.</p>
+        </section>
+    </main>
+
+    <!-- ================= فوتر ================= -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="logo" href="#hero">
+                        <span class="logo-mark" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="4"/></svg>
+                        </span>
+                        <span>تایم‌لپس رکوردر<small>by IntellSoft</small></span>
+                    </a>
+                    <p>راه‌حل حرفه‌ای و سبک برای ضبط تایم‌لپس از دوربین‌های تحت شبکه؛ مناسب پروژه‌های ساختمانی، کارگاهی، کشاورزی و هر جایی که تغییرات در طول زمان اهمیت دارد.</p>
+                    <a class="intell-badge" href="https://intellsoft.ir" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M14.5 4.5 20 10M15 3l6 6-8 8H7v-6z"/></svg>
+                        intellsoft.ir
+                    </a>
+                </div>
+                <nav class="footer-col" aria-label="دسترسی سریع">
+                    <h3>دسترسی سریع</h3>
+                    <a href="#features">امکانات نرم‌افزار</a>
+                    <a href="#screenshots">تصاویر محیط برنامه</a>
+                    <a href="#how">نحوه کار</a>
+                    <a href="#faq">سوالات متداول</a>
+                    <a href="#download">دانلود</a>
+                </nav>
+                <nav class="footer-col" aria-label="منابع">
+                    <h3>منابع</h3>
+                    <a href="https://intellsoft.ir" target="_blank" rel="noopener">سایت IntellSoft</a>
+                    <a href="https://intellsoft.ir" target="_blank" rel="noopener">مستندات و پشتیبانی</a>
+                    <a href="https://intellsoft.ir" target="_blank" rel="noopener">محصولات دیگر</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>© <span id="year">۲۰۲۵</span> — طراحی و توسعه با <span aria-hidden="true">♥</span> توسط <a href="https://intellsoft.ir" target="_blank" rel="noopener">IntellSoft</a> | تمامی حقوق محفوظ است.</p>
             </div>
         </div>
+    </footer>
 
-        <!-- ====== INFO BLOCK ====== -->
-        <div class="info-block">
-            <h2>📌 درباره محصول</h2>
-            <p>
-                <strong>نرم‌افزار ضبط تایم‌لپس دوربین مداربسته</strong> محصولی از <strong>IntellSoft</strong> است
-                که با هدف تبدیل دوربین‌های نظارتی به ابزاری خلاقانه برای ثبت تغییرات در طول زمان طراحی شده است.
-                این نرم‌افزار با اتصال به دوربین‌های تحت شبکه، تصاویر را در بازه‌های زمانی مشخص ذخیره کرده و
-                خروجی با کیفیت بالا ارائه می‌دهد.
-            </p>
-            <p>
-                از جمله کاربردهای اصلی آن می‌توان به <strong>پایش پیشرفت پروژه‌های ساختمانی</strong>،
-                <strong>مستندسازی تغییرات طبیعت</strong>، <strong>تحلیل امنیتی</strong> و
-                <strong>ایجاد محتوای جذاب تایم‌لپس</strong> اشاره کرد.
-            </p>
-            <ul>
-                <li>پشتیبانی از دوربین‌های IP و آنالوگ</li>
-                <li>تنظیم فاصله زمانی بین ثبت تصاویر</li>
-                <li>خروجی با کیفیت و نرخ فریم قابل تنظیم</li>
-                <li>ذخیره‌سازی هوشمند و کاهش حجم داده</li>
-                <li>تشخیص حرکت و رویدادهای مهم</li>
-                <li>رابط کاربری گرافیکی ساده و روان</li>
-            </ul>
-        </div>
-
-        <!-- ====== FOOTER ====== -->
-        <div class="footer-links">
-            <div class="official">
-                🔗 <strong>سایت رسمی:</strong>
-                <a href="https://intellsoft.ir/product/timelapse-camera-recorder/" target="_blank" rel="noopener">
-                    intellsoft.ir/product/timelapse-camera-recorder
-                </a>
+    <!-- ================= لایت‌باکس ================= -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="نمایش بزرگ تصاویر نرم‌افزار">
+        <button class="lb-btn lb-close" aria-label="بستن"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+        <button class="lb-btn lb-prev" aria-label="تصویر قبلی"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></button>
+        <button class="lb-btn lb-next" aria-label="تصویر بعدی"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></button>
+        <figure class="lb-figure">
+            <img id="lbImage" src="" alt="" hidden>
+            <div class="lb-placeholder" id="lbPlaceholder" hidden>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="4"/></svg>
+                <p id="lbPhText">تصویر هنوز بارگذاری نشده است</p>
             </div>
-            <div>
-                <span style="opacity:0.7;">© ۱۴۰۵ – IntellSoft</span>
-            </div>
-        </div>
-
+            <figcaption><span id="lbCounter"></span><p id="lbCaption"></p></figcaption>
+        </figure>
     </div>
 
-    <!-- ====== THEME SCRIPT (with localStorage) ====== -->
+    <button id="toTop" aria-label="بازگشت به بالای صفحه">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5m0 0-6 6m6-6 6 6"/></svg>
+    </button>
+
     <script>
-        (function() {
-            const toggleBtn = document.getElementById('themeToggle');
-            const html = document.documentElement;
+    (function () {
+      'use strict';
+      const $  = (s, c = document) => c.querySelector(s);
+      const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+      const faNum   = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[+d]);
+      const fine    = matchMedia('(pointer:fine)').matches;
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            // get stored theme or system preference
-            const stored = localStorage.getItem('theme');
-            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            let currentTheme = stored || (systemDark ? 'dark' : 'light');
+      /* ---------- ۱) ناوبری، نوار پیشرفت، بازگشت به بالا ---------- */
+      const navbar = $('#navbar'), progress = $('#progressBar'), toTop = $('#toTop');
+      const heroVisual = $('.hero-visual');
+      let ticking = false;
+      function onScroll() {
+        const y = scrollY;
+        navbar.classList.toggle('scrolled', y > 40);
+        toTop.classList.toggle('show', y > 600);
+        const h = document.documentElement.scrollHeight - innerHeight;
+        progress.style.transform = 'scaleX(' + (h > 0 ? y / h : 0) + ')';
+        if (heroVisual && y < innerHeight) heroVisual.style.transform = 'translateY(' + y * 0.22 + 'px)';
+        ticking = false;
+      }
+      addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(onScroll); ticking = true; } }, { passive: true });
+      onScroll();
+      toTop.addEventListener('click', () => scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }));
 
-            function applyTheme(theme) {
-                html.setAttribute('data-theme', theme);
-                localStorage.setItem('theme', theme);
-                // update toggle button text (optional)
-                const span = toggleBtn.querySelector('span');
-                if (span) {
-                    span.textContent = theme === 'dark' ? 'روشن' : 'تاریک';
-                }
-                // update icon (simple sun/moon)
-                const svg = toggleBtn.querySelector('svg');
-                if (svg) {
-                    if (theme === 'dark') {
-                        svg.innerHTML =
-                            `<path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>`;
-                    } else {
-                        svg.innerHTML =
-                            `<path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>`;
-                    }
-                }
-            }
+      /* ---------- ۲) منوی موبایل ---------- */
+      const burger = $('#menuBtn'), mobileMenu = $('#mobileMenu');
+      burger.addEventListener('click', () => {
+        const open = mobileMenu.classList.toggle('open');
+        burger.classList.toggle('open', open);
+        burger.setAttribute('aria-expanded', String(open));
+      });
+      $$('#mobileMenu a').forEach(a => a.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      }));
 
-            applyTheme(currentTheme);
-
-            toggleBtn.addEventListener('click', function() {
-                const current = html.getAttribute('data-theme');
-                const next = current === 'dark' ? 'light' : 'dark';
-                applyTheme(next);
-            });
-
-            // optional: listen to system changes
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-                if (!localStorage.getItem('theme')) {
-                    applyTheme(e.matches ? 'dark' : 'light');
-                }
-            });
+      /* ---------- ۳) هاله‌ی نشانگر موس ---------- */
+      const glow = $('#cursorGlow');
+      if (glow && fine && !reduced) {
+        let gx = innerWidth / 2, gy = innerHeight / 2, tx = gx, ty = gy;
+        addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; }, { passive: true });
+        (function loop() {
+          gx += (tx - gx) * .12; gy += (ty - gy) * .12;
+          glow.style.transform = 'translate(' + (gx - 350) + 'px,' + (gy - 350) + 'px)';
+          requestAnimationFrame(loop);
         })();
+      } else if (glow) glow.remove();
+
+      /* ---------- ۴) ذرات شناور ---------- */
+      (function particles() {
+        const wrap = $('#particles');
+        if (!wrap || reduced) return;
+        for (let i = 0; i < 26; i++) {
+          const p = document.createElement('i');
+          const s = 2 + Math.random() * 4;
+          p.className = 'particle';
+          p.style.cssText =
+            'left:' + (Math.random() * 100) + '%;bottom:-12px;width:' + s + 'px;height:' + s + 'px;' +
+            '--o:' + (.15 + Math.random() * .3).toFixed(2) + ';opacity:0;' +
+            'animation-duration:' + (14 + Math.random() * 18).toFixed(1) + 's;' +
+            'animation-delay:' + (-Math.random() * 30).toFixed(1) + 's;';
+          if (Math.random() > .45) p.style.background = 'var(--accent)';
+          wrap.appendChild(p);
+        }
+      })();
+
+      /* ---------- ۵) انیمیشن‌های اسکرول ---------- */
+      const revealEls = $$('[data-reveal]');
+      revealEls.forEach(el => { if (el.dataset.delay) el.style.transitionDelay = el.dataset.delay + 'ms'; });
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(en => {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { threshold: .15, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(el => io.observe(el));
+
+      /* ---------- ۶) شمارنده‌های آمار ---------- */
+      const cio = new IntersectionObserver(entries => {
+        entries.forEach(en => {
+          if (!en.isIntersecting) return;
+          const el = en.target; cio.unobserve(el);
+          const target = parseFloat(el.dataset.target), suffix = el.dataset.suffix || '';
+          if (reduced) { el.textContent = faNum(target) + suffix; return; }
+          const t0 = performance.now(), dur = 1800;
+          (function step(now) {
+            const p = Math.min((now - t0) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+            el.textContent = faNum(Math.round(target * e)) + suffix;
+            if (p < 1) requestAnimationFrame(step);
+          })(t0);
+        });
+      }, { threshold: .6 });
+      $$('.stat-num').forEach(c => cio.observe(c));
+
+      /* ---------- ۷) افکت سه‌بعدی کارت‌ها ---------- */
+      if (fine && !reduced) {
+        $$('.tilt').forEach(card => {
+          let raf = null;
+          card.addEventListener('mousemove', e => {
+            if (raf) return;
+            raf = requestAnimationFrame(() => {
+              const r = card.getBoundingClientRect();
+              const x = (e.clientX - r.left) / r.width - .5;
+              const y = (e.clientY - r.top) / r.height - .5;
+              card.style.transform = 'perspective(900px) rotateY(' + (x * 7).toFixed(2) + 'deg) rotateX(' + (-y * 7).toFixed(2) + 'deg) translateY(-6px)';
+              card.style.setProperty('--gx', ((x + .5) * 100).toFixed(1) + '%');
+              card.style.setProperty('--gy', ((y + .5) * 100).toFixed(1) + '%');
+              raf = null;
+            });
+          });
+          card.addEventListener('mouseleave', () => {
+            if (raf) { cancelAnimationFrame(raf); raf = null; }
+            card.style.transform = '';
+          });
+        });
+      }
+
+      /* ---------- ۸) دکمه‌های مغناطیسی + موج کلیک ---------- */
+      if (fine && !reduced) {
+        $$('.magnetic').forEach(btn => {
+          btn.addEventListener('mousemove', e => {
+            const r = btn.getBoundingClientRect();
+            const x = e.clientX - r.left - r.width / 2, y = e.clientY - r.top - r.height / 2;
+            btn.style.transform = 'translate(' + (x * .18).toFixed(1) + 'px,' + (y * .28).toFixed(1) + 'px)';
+          });
+          btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+        });
+      }
+      $$('.btn').forEach(btn => {
+        btn.addEventListener('click', e => {
+          const r = btn.getBoundingClientRect(), d = Math.max(r.width, r.height) * 2;
+          const s = document.createElement('span');
+          s.className = 'ripple';
+          s.style.cssText = 'width:' + d + 'px;height:' + d + 'px;left:' + (e.clientX - r.left - d / 2) + 'px;top:' + (e.clientY - r.top - d / 2) + 'px';
+          btn.appendChild(s);
+          s.addEventListener('animationend', () => s.remove());
+        });
+      });
+
+      /* ---------- ۹) شبیه‌سازی زنده‌ی ضبط در هیرو ---------- */
+        const clock = $('#liveClock'), frames = $('#frameCount');
+        const flash = $('#captureFlash'), strip = $('#filmstrip');
+        if (!clock) return;
+        const tickClock = () => {
+          const n = new Date();
+          clock.textContent = n.toLocaleDateString('fa-IR') + ' — ' + n.toLocaleTimeString('fa-IR');
+        };
+        tickClock(); setInterval(tickClock, 1000);
+
+        let count = 1240;
+        if (reduced) return;
+        setInterval(() => {
+          count++;
+          frames.textContent = count.toLocaleString('fa-IR');
+          flash.classList.remove('go'); void flash.offsetWidth; flash.classList.add('go');
+          const t = document.createElement('i');
+          t.className = 'thumb';
+          const h = 185 + Math.floor(Math.random() * 90);
+          t.style.background = 'linear-gradient(135deg,hsl(' + h + ' 52% 42%),hsl(' + ((h + 55) % 360) + ' 58% 20%))';
+          strip.prepend(t);
+          while (strip.children.length > 7) strip.lastElementChild.remove();
+        }, 3400);
+      })();
+
+      /* پارالاکس مانیتور با حرکت موس */
+      const monitor = $('#monitor');
+      if (monitor && fine && !reduced) {
+        addEventListener('mousemove', e => {
+          const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5;
+          monitor.style.transform = 'rotateY(' + (-x * 5).toFixed(2) + 'deg) rotateX(' + (y * 4).toFixed(2) + 'deg)';
+        }, { passive: true });
+      }
+
+      /* ---------- ۱۰) نقشه‌ی شبکه ONVIF ---------- */
+        const map = $('#netMap'), status = $('#netStatus');
+        if (!map) return;
+        const dots = [];
+        for (let i = 0; i < 40; i++) {
+          const d = document.createElement('i');
+          map.appendChild(d); dots.push(d);
+        }
+        const cams = new Set();
+        while (cams.size < 6) cams.add(Math.floor(Math.random() * 40));
+        const mio = new IntersectionObserver(entries => {
+          entries.forEach(en => {
+            if (!en.isIntersecting) return;
+            mio.unobserve(map);
+            let k = 0;
+            cams.forEach(i => { setTimeout(() => dots[i].classList.add('on'), 350 + k * 420); k++; });
+            setTimeout(() => status.classList.add('show'), 350 + k * 420 + 250);
+          });
+        }, { threshold: .4 });
+        mio.observe(map);
+      })();
+
+      /* ---------- ۱۱) لینک فعال ناوبری ---------- */
+      const navLinks = $$('.nav-link');
+      const secObs = new IntersectionObserver(entries => {
+        entries.forEach(en => {
+          if (en.isIntersecting) {
+            const id = '#' + en.target.id;
+            navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === id));
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      $$('main section[id]').forEach(s => secObs.observe(s));
+
+      /* ---------- ۱۲) آکاردئون سوالات ---------- */
+      $$('.faq-item').forEach(item => {
+        const btn = $('.faq-q', item);
+        btn.addEventListener('click', () => {
+          const wasOpen = item.classList.contains('open');
+          $$('.faq-item.open').forEach(o => {
+            o.classList.remove('open');
+            $('.faq-q', o).setAttribute('aria-expanded', 'false');
+          });
+          if (!wasOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+        });
+      });
+
+      /* ---------- ۱۳) لایت‌باکس تصاویر ---------- */
+        const lb = $('#lightbox'); if (!lb) return;
+        const img = $('#lbImage'), cap = $('#lbCaption'), counter = $('#lbCounter');
+        const ph = $('#lbPlaceholder'), phText = $('#lbPhText');
+        const items = $$('.shot').map(el => {
+          const image = $('img', el);
+          const it = {
+            title: $('figcaption h3', el).textContent,
+            desc:  $('figcaption p', el).textContent,
+            src: image ? image.src : '', ok: false
+          };
+          if (image) {
+            if (image.complete && image.naturalWidth > 0) it.ok = true;
+            image.addEventListener('load',  () => { it.ok = true; });
+            image.addEventListener('error', () => {
+              it.ok = false;
+              const f = $('.shot-fallback', el);
+              if (f) f.hidden = false;
+            });
+          }
+          return it;
+        });
+        let cur = 0, lastFocus = null;
+
+        function render() {
+          const it = items[cur];
+          if (it.ok) { img.hidden = false; ph.hidden = true; img.src = it.src; img.alt = it.title; }
+          else { img.hidden = true; ph.hidden = false; phText.textContent = '«' + it.title + '» — تصویر هنوز اضافه نشده است'; }
+          cap.textContent = it.title + ' — ' + it.desc;
+          counter.textContent = faNum(cur + 1) + ' / ' + faNum(items.length);
+        }
+        function open(i) {
+          cur = i; lastFocus = document.activeElement;
+          render(); lb.classList.add('open');
+          document.body.style.overflow = 'hidden';
+          $('.lb-close').focus();
+        }
+        function close() {
+          lb.classList.remove('open');
+          document.body.style.overflow = '';
+          if (lastFocus) lastFocus.focus();
+        }
+        const step = d => { cur = (cur + d + items.length) % items.length; render(); };
+
+        $$('.shot').forEach((el, i) => {
+          el.addEventListener('click', () => open(i));
+          el.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+          });
+        });
+        $('.lb-close').addEventListener('click', close);
+        $('.lb-prev').addEventListener('click', () => step(-1));
+        $('.lb-next').addEventListener('click', () => step(1));
+        lb.addEventListener('click', e => { if (e.target === lb) close(); });
+        addEventListener('keydown', e => {
+          if (!lb.classList.contains('open')) return;
+          if (e.key === 'Escape') close();
+          else if (e.key === 'ArrowLeft')  step(1);
+          else if (e.key === 'ArrowRight') step(-1);
+        });
+      })();
+
+      /* ---------- ۱۴) سال شمسی فوتر ---------- */
+      const yr = $('#year');
+      if (yr) yr.textContent = faNum(new Date().getFullYear());
+    })();
     </script>
 </body>
 </html>
